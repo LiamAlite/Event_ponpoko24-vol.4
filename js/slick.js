@@ -3020,6 +3020,8 @@ $(document).ready(function(){
     asNavFor: '.slider-nav',
     draggable: true,
     lazyload: 'ondemand',
+    easing: 'ease-in-out',
+    speed: 800,
   });
 });
 $('.slider-nav').slick({
