@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
 	position: relative;
 	overflow-wrap: normal;
@@ -10,13 +10,12 @@ html, body {
 }
 html {
   visibility: hidden;
-
 }
 html.wf-active {
   visibility: visible;
 }
-img
-	border-radius: 5px
+.slider-for img
+	border-radius: 15px
 #canvas
   width 100%
   height 100%
@@ -62,9 +61,58 @@ img
 }
 @media screen and (min-width: 1200px){
 	#main-slide{
-		max-height 630px
+		max-height 700px
 	}
 	#sub-slide{
-		max-height 200px
+		max-height 250px
 	}
 }
+#main
+	border-radius: 15px
+	padding 35px 20px 0px 20px
+	background-color: rgba(#ddd, 0.2)
+.shadow-material
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+.left-side
+	position: relative;
+	height 100%
+	white-space: nowrap
+	& .left-text
+		letter-spacing: 0.05em
+		font-family: omnes-pro, sans-serif;
+		font-weight: 800;
+		font-style: normal;
+		font-size 6em
+		top 400px
+		right -410px
+		position: absolute;
+		transform rotate(-90deg)
+		-webkit-text-stroke: 2px #fff;
+		text-stroke: 2px #fff;
+		color: rgba(#fff, 0.1)
+		transition-timing-function:ease-in-out;
+		transition-duration:0.2s;
+		&:hover
+			letter-spacing: 0.1em
+.right-side
+	position: relative;
+	height 100%
+	white-space: nowrap
+	& .right-text
+		letter-spacing: 0.05em
+		font-family: omnes-pro, sans-serif;
+		font-weight: 800;
+		font-style: normal;
+		font-size 6em
+		top 160px
+		left -175px
+		position: absolute;
+		transform rotate(90deg)
+		-webkit-text-stroke: 2px #fff;
+		text-stroke: 2px #fff;
+		color: rgba(#fff, 0.1)
+		transition-timing-function:ease-in-out;
+		transition-duration:0.2s;
+		&:hover
+			letter-spacing: 0.15em

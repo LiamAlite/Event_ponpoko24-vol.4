@@ -26,33 +26,38 @@ head
 body.wrapper
   canvas#canvas
   section#body
-    div.container
-      div.row#main-slide
-        div.col
-          div.slider-for
-            img.img-fluid(src="/img/bg.png")
-            img.img-fluid(src="/img/bg.png")
-            img.img-fluid(src="/img/bg.png")
-            img.img-fluid(src="/img/bg.png")
-            img.img-fluid(src="/img/bg.png")
-            img.img-fluid(src="/img/bg.png")
-      div.row#sub-slide
-        div.col
-          div.slider-nav
-            div.p-2: img.img-fluid(src="/img/bg.png")
-            div.p-2: img.img-fluid(src="/img/bg.png")
-            div.p-2: img.img-fluid(src="/img/bg.png")        
-            div.p-2: img.img-fluid(src="/img/bg.png")
-            div.p-2: img.img-fluid(src="/img/bg.png")
-            div.p-2: img.img-fluid(src="/img/bg.png")
-    div.container
-      div.row
-        div.col
-          p saifjasofiasoifajdiofjdossdj
-          h1 ぽんぽこ24 vol.4ぽんぽこ24 vol.4ぽんぽこ24 vol.4
-          h1 saifjasof iasoifajd iofjdos sdjsaif jasofia soifajdiof jdossd 
-          h1 改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト
-          h1 saifjasofiasoifajdiofjdossdj
-          
+    div.container-fluid
+      div.row.justify-content-center
+        div.col-2.left-side.sticky-top
+          div.left-text PONPOKO24 vol.4
+        div.col-12.col-lg-8.shadow-material#main
+          div.container-fluid
+            div.row#main-slide
+              div.col
+                div.slider-for
+                  img.img-fluid(src="/img/bg.png")
+                  img.img-fluid(src="/img/bg.png")
+                  img.img-fluid(src="/img/bg.png")
+                  img.img-fluid(src="/img/bg.png")
+                  img.img-fluid(src="/img/bg.png")
+                  img.img-fluid(src="/img/bg.png")
+            div.row.mt-lg-4#sub-slide
+              div.col
+                div.slider-nav
+                  div.px-3: img.img-fluid(src="/img/bg.png")
+                  div.px-3: img.img-fluid(src="/img/bg.png")
+                  div.px-3: img.img-fluid(src="/img/bg.png")        
+                  div.px-3: img.img-fluid(src="/img/bg.png")
+                  div.px-3: img.img-fluid(src="/img/bg.png")
+                  div.px-3: img.img-fluid(src="/img/bg.png")
+            div.row.mt-3
+              div.col
+                p saifjasofiasoifajdiofjdossdj
+                h1 ぽんぽこ24 vol.4ぽんぽこ24 vol.4ぽんぽこ24 vol.4
+                h1 saifjasof iasoifajd iofjdos sdjsaif jasofia soifajdiof jdossd 
+                h1 改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト
+                h1 saifjasofiasoifajdiofjdossdj
+        div.col-2.right-side.sticky-top
+          div.right-text PARTY!!
   script(type="text/javascript" src="/js/background.js")
   script(type="text/javascript" src="/js/slick.js")
