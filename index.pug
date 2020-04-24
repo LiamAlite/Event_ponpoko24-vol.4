@@ -27,13 +27,18 @@ body.wrapper
   canvas#canvas
   section#body
     div.container-fluid
-      div.row.justify-content-center
-        div.col-2.left-side.sticky-top
+      div.row
+        // --------PC--------
+        div.col-2.left-side.sticky-top.d-none.d-lg-block
           div.left-text PONPOKO24 vol.4
           
+        // --------SP--------
+        div.col-2.left-side.sticky-top.d-lg-none.d-block
+          div.left-text-sp PONPOKO24 vol.4
+          
         // --------Main content--------
-        div.col-12.col-lg-8.shadow-material#main
-          div.container-fluid
+        div.col-12.col-lg-8.shadow-material.mt-lg-4#main
+          div.container-fluid.mt-4
             div.row#main-slide
               div.col
                 div.slider-for
@@ -47,7 +52,7 @@ body.wrapper
                 div.slider-nav
                   - var list = ['20:00 - 21:00', '21:00 - 22:00', '22:00 - 23:00', '23:00 - 00:00', '00:00 - 01:00',　'01:00 - 02:00']
                   each item, index in list
-                    img.img-fluid.px-3(src="/img/thumbnail/" + (index + 1) + ".png")
+                    img.img-fluid.px-lg-3(src="/img/thumbnail/" + (index + 1) + ".png")
             div.row.mt-3
               div.col
                 p saifjasofiasoifajdiofjdossdj
@@ -55,7 +60,9 @@ body.wrapper
                 h1 saifjasof iasoifajd iofjdos sdjsaif jasofia soifajdiof jdossd 
                 h1 改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト改行テスト
                 h1 saifjasofiasoifajdiofjdossdj
-        div.col-2.right-side.sticky-top
+        
+        // --------PC--------
+        div.col-2.right-side.sticky-top.d-none.d-lg-block
           div.right-text PARTY!!
   script(type="text/javascript" src="/js/background.js")
   script(type="text/javascript" src="/js/slick.js")
