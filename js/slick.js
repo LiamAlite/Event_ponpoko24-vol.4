@@ -3036,4 +3036,5 @@ $('.slider-nav').slick({
   focusOnSelect: true,
   draggable: true,
   lazyload: 'ondemand',
+  swipeToSlide: true,
 });
