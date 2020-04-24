@@ -3013,7 +3013,7 @@
 $(document).ready(function(){
   $('.slider-for').slick({
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -3021,12 +3021,13 @@ $(document).ready(function(){
     draggable: true,
     lazyload: 'ondemand',
     easing: 'ease-in-out',
-    speed: 800,
+    speed: 500,
+    infinite: true,
   });
 });
 $('.slider-nav').slick({
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 5000,
   slidesToShow: 3,
   slidesToScroll: 1,
   asNavFor: '.slider-for',
@@ -3037,4 +3038,5 @@ $('.slider-nav').slick({
   draggable: true,
   lazyload: 'ondemand',
   swipeToSlide: true,
+  infinite: true,
 });
