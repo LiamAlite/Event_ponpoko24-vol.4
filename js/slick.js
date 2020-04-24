@@ -3019,7 +3019,6 @@ $(document).ready(function(){
     arrows: false,
     asNavFor: '.slider-nav',
     draggable: true,
-    mobileFirst: true,
     lazyload: 'ondemand',
   });
 });
@@ -3034,6 +3033,5 @@ $('.slider-nav').slick({
   centerMode: true,
   focusOnSelect: true,
   draggable: true,
-  mobileFirst: true,
   lazyload: 'ondemand',
 });
