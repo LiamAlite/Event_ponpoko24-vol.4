@@ -4,10 +4,13 @@ html, body {
   width: 100vw;
   height: 100%;
 	position: relative;
-  font-family: tbudrgothic-std,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-	overflow-wrap: normal
+	overflow-wrap: normal;
+}
+html {
+  visibility: hidden;
+}
+html.wf-active {
+  visibility: visible;
 }
 img
 	border-radius: 5px
@@ -23,6 +26,10 @@ img
 	right 0
 	margin auto
 	margin-top 20px
+	font-family: heisei-maru-gothic-std, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
 .wrapper {
   height: 100%;
   width: 100%;
