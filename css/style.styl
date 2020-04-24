@@ -1,0 +1,46 @@
+html, body
+	height 100%
+	position relative
+	margin 0
+	padding 0
+	background #888
+
+.cp_item
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	transition transform 0.4s ease
+	transform translateX(-100%)
+	& .inner
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+		text-shadow 0 1px 1px rgba(0, 0, 0, 0.1)
+		line-height 1.2
+		color #fff
+		z-index 2
+
+colors = (#F06292 #FFB74D #81C784 #26C6DA)
+for i in (0..3)
+	.cp_item:nth-of-type({i+1})
+		background-color: colors[i]
+	input[type="radio"]:nth-of-type({i+1})
+		outline-color: colors[i]
+		top: i*25%
+
+input[type="radio"]
+	position: absolute
+	left: 0
+	width: 2em
+	height: 25%
+	outline: 2em solid
+	outline-offset: -2em
+	margin: 0
+	z-index: 1
+	cursor: pointer
+	&:checked + .cp_item
+		transform: translateX(0%)
+		transition: transform 0.4s ease 0.4s
