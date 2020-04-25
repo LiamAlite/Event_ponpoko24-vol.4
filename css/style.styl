@@ -4,7 +4,7 @@ html, body
   width 100%
   height 100%
   position relative
-  
+
 html
   visibility hidden
 
@@ -23,47 +23,45 @@ h2.title
 .slick-slide
   position relative
   & .caption
+    border-radius 15px 15px 0px 0px
     transform rotate(0.0001deg)
     position absolute
     left 0
     top 0
     z-index 2
-    width 25%
-    padding 5px 10px
-    background rgba(#222 .75)
+    width 100%
+    padding 10px 0px 10px 300px
+    background rgba(#222 .5)
     color #eee
     opacity 0
     transition .3s ease
-    font-family omnes-pro, sans-serif
-    font-weight 600
-    font-style normal
+  	font-family heisei-maru-gothic-std, sans-serif
+  	font-weight 400
+  	font-style normal
     font-size 1.2em
-    border-radius 15px 0px 15px 0px
     min-width 200px
-    text-align center
-
+    text-align left
 .slick-current .caption
   opacity 1
+  padding 10px 0px 10px 20px
   transition-delay .75s
 
 .slider-for
   transform rotate(0.0001deg)
   border-radius 15px
   & img
-    border solid 2px #222
     border-radius 15px
-
 // < 1200px
 @media screen and (max-width: 1200px)
-	#main-slide
-		height 50vw
-	#sub-slide
-		max-height 16vw
+  #main-slide
+  	height 53vw
+  #sub-slide
+  	max-height 16vw
 
 // > 1200px
 @media screen and (min-width: 1200px)
 	#main-slide
-		max-height 700px
+		max-height 750px
 	#sub-slide
 		max-height 250px
 
@@ -106,13 +104,13 @@ h2.title
 
 //main content
 #main
-	border-radius 15px
-	padding 35px 20px 0px 20px
+  border-radius 15px
   margin-bottom 20px
-	background-color rgba(#ddd, 0.2)
+  background-color rgba(#ddd, 0.2)
+  padding 0px
 
 .shadow-material
-	box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+  box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
 .left-side, .right-side
 	position relative
