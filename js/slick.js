@@ -3023,6 +3023,7 @@ $(document).ready(function(){
     easing: 'ease-in-out',
     speed: 500,
     infinite: true,
+    mobileFirst: true,
   });
 });
 $('.slider-nav').slick({
@@ -3039,4 +3040,5 @@ $('.slider-nav').slick({
   lazyload: 'ondemand',
   swipeToSlide: true,
   infinite: true,
+  mobileFirst: true,
 });
