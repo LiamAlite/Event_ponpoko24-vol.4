@@ -248,3 +248,54 @@ border-left: none;
 h3
   font-weight: bold;
   color rgba(black, 0.75)
+
+//button
+.sns_btn {
+  display: inline-block;
+  color: #fff;
+  height: 3em;
+  width: 3em;
+  position: relative;
+  // text-align: center;
+  // clear:both;
+  // white-space:nowrap;
+  font-size: 1.5em;
+  border-radius: 0.3125em;
+  box-shadow: 0 0.1875em 0.3125em 0 rgba(0, 0, 0, 0.35);
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  transition: all .2s;
+  overflow: hidden;
+  background-color: #55acee
+  i {
+    position: absolute;
+    // top: 50%;
+    // transform: translateY(-50%);
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: auto;
+  }
+  &:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0.3125em 0.9375em 0 rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.9);
+    box-shadow: 0 0.125em 0.1875em 0 rgba(0, 0, 0, 0.4);
+  }
+}
+
+.btn_twitter {
+  &:hover {
+    background: #fff;
+  }
+}
+
+.share-text
+  font-family omnes-pro, sans-serif
+  font-weight 800
+  font-style normal
+  font-size 2em
+  color rgba(white, 0.9)

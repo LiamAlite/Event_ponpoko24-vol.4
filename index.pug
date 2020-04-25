@@ -10,6 +10,8 @@ head
   script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
   script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous")
   script(type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_SVG")
+  link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous")
+
   .
     <script>
       (function(d) {
@@ -39,7 +41,7 @@ body.wrapper
           div.left-text-sp PONPOKO24 vol.4
           
         // --------Main content--------
-        div.col-12.col-lg-8.shadow-material.mt-lg-4#main
+        div.col-12.col-lg-8.shadow-material#main
           div.container-fluid.mt-4
             
             // --------Main Slider--------
@@ -82,6 +84,7 @@ body.wrapper
                       div.card-body.p-1
                           div.cp_timeline04
                             
+                            // --------item--------
                             div.timeline_item.mb-5
                               div.time_date
                                 p.time 20:00-21:00
@@ -90,14 +93,15 @@ body.wrapper
                                   div.row.pt-3.pl-lg-3
                                     div.col-12.col-lg-4
                                       img.img-fluid(src="/img/thumbnail/1.png" data-adaptive-background="1")
-                                    div.col-12.col-lg-7.mt-3.mt-lg-0
+                                    div.col-12.col-lg-6.mt-3.mt-lg-0
                                       p マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。<br>チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！
-                                    div.col-12.col-lg-1
-                                      button.button aa
-                                  hr
+                                    div.col-12.col-lg-2
+                                      p.share-text.text-center SHARE!
+                                      a.sns_btn.btn_twitter.mx-auto.d-block(href="#")
+                                        i.fab.fa-twitter
                                   div.row
                                     div.col
-                                      h3.mt-2.mb-0.ml-3.text-center.text-lg-left 出演者
+                                      h3.mt-4.mb-0.text-center.text-lg-left 出演者
                                       
                                       // --------PC--------
                                       div.guest-list.d-none.d-lg-block
@@ -109,13 +113,14 @@ body.wrapper
                                       div.container-fluid.d-lg-none.d-block
                                         div.row.justify-content-between
                                           div.col-6.col-md-4
-                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/01.png")
+                                            img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/01.png")
                                           div.col-6.col-md-4
-                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/02.png")
+                                            img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/02.png")
                                           div.col-6.col-md-4
-                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/03.png")
-                                              
-                            div.timeline_item
+                                            img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/03.png")
+                            hr
+                            // --------item--------
+                            div.timeline_item.mb-5
                               div.time_date
                                 p.time 20:00-21:00
                                 p.flag すくすくめぐちゃん
@@ -123,14 +128,15 @@ body.wrapper
                                   div.row.pt-3.pl-lg-3
                                     div.col-12.col-lg-4
                                       img.img-fluid(src="/img/thumbnail/1.png" data-adaptive-background="1")
-                                    div.col-12.col-lg-7.mt-3.mt-lg-0
+                                    div.col-12.col-lg-6.mt-3.mt-lg-0
                                       p マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。<br>チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！
-                                    div.col-12.col-lg-1
-                                      button.button aa
-                                  hr
+                                    div.col-12.col-lg-2
+                                      p.share-text.text-center SHARE!
+                                      a.sns_btn.btn_twitter.mx-auto.d-block(href="#")
+                                        i.fab.fa-twitter
                                   div.row
                                     div.col
-                                      h3.mt-2.mb-0.ml-3.text-center.text-lg-left 出演者
+                                      h3.mt-4.mb-0.text-center.text-lg-left 出演者
                                       
                                       // --------PC--------
                                       div.guest-list.d-none.d-lg-block
@@ -142,11 +148,11 @@ body.wrapper
                                       div.container-fluid.d-lg-none.d-block
                                         div.row.justify-content-between
                                           div.col-6.col-md-4
-                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/01.png")
+                                            img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/01.png")
                                           div.col-6.col-md-4
-                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/02.png")
+                                            img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/02.png")
                                           div.col-6.col-md-4
-                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/03.png")
+                                            img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/03.png")
             // --------part 2--------      
             div.card
               div.card-header#Head-2(role="tab")
