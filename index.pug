@@ -81,7 +81,8 @@ body.wrapper
                     div.collapse.show#Part1(role="tabpanel" aria-labelledby="Head-1" data-parent="#accordion")
                       div.card-body.p-1
                           div.cp_timeline04
-                            div.timeline_item.mb-3
+                            
+                            div.timeline_item.mb-5
                               div.time_date
                                 p.time 20:00-21:00
                                 p.flag すくすくめぐちゃん
@@ -113,36 +114,39 @@ body.wrapper
                                             img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/02.png")
                                           div.col-6.col-md-4
                                             img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/03.png")
-                            div.timeline_item.mb-3
-                              div.time_date
-                                p.time 20:00-21:00
-                                p.flag すくすくめぐちゃん
-                                img.img-fluid(src="/img/thumbnail/2.png")
-        
+                                              
                             div.timeline_item
                               div.time_date
                                 p.time 20:00-21:00
                                 p.flag すくすくめぐちゃん
-                                img.img-fluid(src="/img/thumbnail/3.png")
-                                
-                            div.timeline_item
-                              div.time_date
-                                p.time 20:00-21:00
-                                p.flag すくすくめぐちゃん
-                                img.img-fluid(src="/img/thumbnail/4.png")
-
-                            div.timeline_item
-                              div.time_date
-                                p.time 20:00-21:00
-                                p.flag すくすくめぐちゃん
-                                img.img-fluid(src="/img/thumbnail/5.png")
-        
-                            div.timeline_item
-                              div.time_date
-                                p.time 20:00-21:00
-                                p.flag すくすくめぐちゃん
-                                img.img-fluid(src="/img/thumbnail/6.png")
-
+                                div.container-fluid.timeline-content
+                                  div.row.pt-3.pl-lg-3
+                                    div.col-12.col-lg-4
+                                      img.img-fluid(src="/img/thumbnail/1.png" data-adaptive-background="1")
+                                    div.col-12.col-lg-7.mt-3.mt-lg-0
+                                      p マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。<br>チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！
+                                    div.col-12.col-lg-1
+                                      button.button aa
+                                  hr
+                                  div.row
+                                    div.col
+                                      h3.mt-2.mb-0.ml-3.text-center.text-lg-left 出演者
+                                      
+                                      // --------PC--------
+                                      div.guest-list.d-none.d-lg-block
+                                        img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/01.png")
+                                        img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/02.png")
+                                        img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/03.png")
+                                          
+                                      // --------SP--------
+                                      div.container-fluid.d-lg-none.d-block
+                                        div.row.justify-content-between
+                                          div.col-6.col-md-4
+                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/01.png")
+                                          div.col-6.col-md-4
+                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/02.png")
+                                          div.col-6.col-md-4
+                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/03.png")
             // --------part 2--------      
             div.card
               div.card-header#Head-2(role="tab")
