@@ -97,10 +97,22 @@ body.wrapper
                                   div.row
                                     div.col
                                       h3.mt-2.mb-0.ml-3.text-center.text-lg-left 出演者
-                                      div.guest-list
-                                        img.img-thumbnail.guest.m-2(src="/img/guest/01.png")
-                                        img.img-thumbnail.guest.m-2(src="/img/guest/02.png")
-                                        img.img-thumbnail.guest.m-2(src="/img/guest/03.png")
+                                      
+                                      // --------PC--------
+                                      div.guest-list.d-none.d-lg-block
+                                        img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/01.png")
+                                        img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/02.png")
+                                        img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/03.png")
+                                          
+                                      // --------SP--------
+                                      div.container-fluid.d-lg-none.d-block
+                                        div.row.justify-content-between
+                                          div.col-6.col-md-4
+                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/01.png")
+                                          div.col-6.col-md-4
+                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/02.png")
+                                          div.col-6.col-md-4
+                                            img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/03.png")
                             div.timeline_item.mb-3
                               div.time_date
                                 p.time 20:00-21:00
