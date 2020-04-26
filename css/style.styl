@@ -1,3 +1,4 @@
+// --------common settings--------
 html, body
   margin 0
   padding 0
@@ -5,6 +6,7 @@ html, body
   height 100%
   position relative
   -webkit-overflow-scrolling: touch;
+
 html
   visibility hidden
 
@@ -19,7 +21,11 @@ h2.title
   color: rgba(#fff, 0.75)
   text-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
-//slide settings
+h3
+  font-weight: bold;
+  color rgba(black, 0.75)
+
+//--------slide settings--------
 .slick-slide
   position relative
   & .caption
@@ -51,6 +57,7 @@ h2.title
   border-radius 15px
   & img
     border-radius 15px
+
 // < 1200px
 @media screen and (max-width: 1200px)
   #main-slide
@@ -71,7 +78,7 @@ h2.title
   50%{background-position:100% 19%}
   100%{background-position:0% 82%}
 
-//background
+//--------background--------
 #canvas
   width 100%
   height 100%
@@ -89,7 +96,7 @@ h2.title
   background-size 5000% 5000%
   animation rainbow 25s ease infinite
 
-//body section
+//--------body section--------
 #body
 	position absolute
 	top 0
@@ -102,7 +109,7 @@ h2.title
 	font-weight 400
 	font-style normal
 
-//main content
+//--------main--------
 #main
   border-radius 15px
   margin-bottom 20px
@@ -150,11 +157,12 @@ h2.title
   text-shadow 0px 0px 7.5px rgba(black, .3)
 
 .ac-heading
-  font-family omnes-pro, sans-serif
-  font-weight 400
+  font-family heisei-maru-gothic-std, sans-serif
+  font-weight bold
   font-style normal
   font-size 1.5em
-  color black
+  margin-top 10px
+  color rgba(black, 0.8)
 
 .card
   background-color rgba(#eee, 0.3)
@@ -162,12 +170,12 @@ h2.title
 .card-header
   background-color rgba(#eee, 0.5)
 
-//Timeline
+//--------Timeline--------
 .cp_timeline04
   position relative
   margin 0
   padding-bottom 2em
-
+  background-color rgba(white, 0.3)
   &:before
     position absolute
     top 0px
@@ -177,46 +185,95 @@ h2.title
     content ''
     background linear-gradient(0deg, #E27171, #E2C671, #71E284, #71DDE2, #7771E2);
   & .timeline_item
+    height 100%
+    border-radius 10px
+    padding 2px
+    margin-bottom 100px
     margin: 0px 0px 0px 17px
-    & .time_date .time
-      font-family omnes-pro, sans-serif
-      font-size 2.5em
-      font-weight bold
-      position relative
-      margin 0
-      letter-spacing 3px
-      color rgba(233,30,99,0.3)
-      &:before
-        position absolute
-        top 70%
-        left -23px
-        width 15px
-        height 15px
-        content ''
-        -webkit-transform: rotate(45deg)
-        transform rotate(45deg)
-        border 3px solid #e91e63
-        background #fff
+    & .desc
+      font-size: 1em;
+      line-height: 20px;
+      margin-top: 10px;
+      padding-left: 20px;
+      border-left: 1px solid #880e4f;
+    & .time_date
+      & .time
+        font-family omnes-pro, sans-serif
+        font-size 2.5em
+        font-weight bold
+        position relative
+        margin 0
+        letter-spacing 3px
+        color rgba(233,30,99,0.5)
+        &:before
+          position absolute
+          top 40%
+          left -23px
+          width 15px
+          height 15px
+          content ''
+          -webkit-transform: rotate(45deg)
+          transform rotate(45deg)
+          border 3px solid #e91e63
+          background #fff
+      & .flag
+        font-size: 1.4em
+        font-weight: bold
+        margin: 0
+        margin-top: -10px
+        color: #880e4f
+      & .img-wrap
+        background-image url("/img/thumbnail/99.png")
+        background-size: 100% auto;
+        border-radius 10px
+        & > img
+          border-radius 10px
+          box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+          outline-offset -3px
+          transition: ease 0.3s
+          &:hover
+            cursor: pointer
+            opacity: 0.25
 
-.cp_timeline04 .timeline_item .time_date .flag {
-font-size: 1.4em;
-font-weight: bold;
-margin: 0;
-margin-top: -20px;
-color: #880e4f;
-}
-.cp_timeline04 .timeline_item .time_date img {
-border-radius 10px
-box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
-outline-offset -3px
-}
-.cp_timeline04 .timeline_item .desc {
-font-size: 1em;
-line-height: 20px;
-margin-top: 10px;
-padding-left: 20px;
-border-left: 1px solid #880e4f;
-}
+.cp_timeline04 .timeline_item .time_date img.guest
+  border-radius 10px
+  box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+  outline-offset -3px
+  transition: ease 0.2s
+  background rgba(white, 0.5)
+  &:hover
+    transform: scale(1.1,1.1);
+.guest
+  height 110px
+  width 110px
+  &:hover
+    cursor pointer
+    transform: translate(0px,-7.5px);
+
+.guest-list
+  & a:nth-child(5n) .img-thumbnail
+    border solid 2px #E27171
+  & a:nth-child(5n+1) .img-thumbnail
+    border solid 2px #E2C671
+  & a:nth-child(5n+2) .img-thumbnail
+    border solid 2px #71E284
+  & a:nth-child(5n+3) .img-thumbnail
+    border solid 2px #71DDE2
+  & a:nth-child(5n+4) .img-thumbnail
+    border solid 2px #7771E2
+
+.guest-list-sp
+  & div:nth-child(5n) .img-thumbnail
+    border solid 2px #E27171
+  & div:nth-child(5n+1) .img-thumbnail
+    border solid 2px #E2C671
+  & div:nth-child(5n+2) .img-thumbnail
+    border solid 2px #71E284
+  & div:nth-child(5n+3) .img-thumbnail
+    border solid 2px #71DDE2
+  & div:nth-child(5n+4) .img-thumbnail
+    border solid 2px #7771E2
+
 @media only screen and (max-width: 767px) {
   .cp_timeline04:before {
   left: 0px;
@@ -227,27 +284,14 @@ border-left: 1px solid #880e4f;
   .cp_timeline04 .timeline_item {
   margin: 0px 0px 0px 10px;
 }
-.cp_timeline04 .timeline_item .desc {
-padding-left: 0px;
-border-top: 1px solid #880e4f;
-border-left: none;
+  .cp_timeline04 .timeline_item .desc {
+  padding-left: 0px;
+  border-top: 1px solid #880e4f;
+  border-left: none;
+  }
 }
-}
-.timeline-item
-  background-color rgba(white, 0.3)
-  height 100%
-  border-radius 10px
-  padding 2px
-  margin-bottom 100px
 
-.guest
-  height 110px
-  width 110px
-  background-color rgba(white, 0.5)
-  border solid 2px white
-h3
-  font-weight: bold;
-  color rgba(black, 0.75)
+
 
 //button
 .sns_btn {
