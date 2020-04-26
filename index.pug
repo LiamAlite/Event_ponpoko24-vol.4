@@ -1,4 +1,14 @@
 head
+  .
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146142130-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146142130-3');
+    </script>
   link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous")
   link(rel="stylesheet" type="text/css" href="/css/style.css")
   link(rel="stylesheet" type="text/css" href="/slick/slick.css")
@@ -21,6 +31,10 @@ head
         },
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
+      var w = $('.wrapper').width();
+      var h = $('.wrapper').height();
+      $('#canvas').attr('width', w);
+      $('#canvas').attr('height', h);
     </script>
   
 body.wrapper
@@ -161,25 +175,25 @@ body.wrapper
                                                 img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/"+ guest +".png")
 
                               hr
-            // --------part 2--------      
-            div.card
-              div.card-header#Head-2(role="tab")
-                h5.mb-0
-                  a.collapsed.text-body.d-block.py-1.m-n3(data-toggle="collapse" href="#Part2" role="button" aria-expanded="false" aria-controls="Part2")
-                    p.ac-heading Part2 ( 07:00 - 11:00 )
-              div#Part2.collapse(role="tabpanel" aria-labelledby="Head-2" data-parent="#accordion")
-                div.card-body
-                  p アイテム2のコンテンツ
+                  // --------part 2--------      
+                  div.card
+                    div.card-header#Head-2(role="tab")
+                      h5.mb-0
+                        a.collapsed.text-body.d-block.py-1.m-n3(data-toggle="collapse" href="#Part2" role="button" aria-expanded="false" aria-controls="Part2")
+                          p.ac-heading Part2 ( 07:00 - 11:00 )
+                    div#Part2.collapse(role="tabpanel" aria-labelledby="Head-2" data-parent="#accordion")
+                      div.card-body
+                        p アイテム2のコンテンツ
 
-            // --------part 3--------
-            div.card
-              div.card-header#Head-3(role="tab")
-                h5.mb-0
-                  a.collapsed.text-body.d-block.py-1.m-n3(data-toggle="collapse" href="#Part3" role="button" aria-expanded="false" aria-controls="Part3")
-                    p.ac-heading Part3 ( 12:00 - 20:00 )
-              div#Part3.collapse(role="tabpanel" aria-labelledby="Head-3" data-parent="#accordion")
-                div.card-body
-                  p アイテム3のコンテンツ
+                  // --------part 3--------
+                  div.card
+                    div.card-header#Head-3(role="tab")
+                      h5.mb-0
+                        a.collapsed.text-body.d-block.py-1.m-n3(data-toggle="collapse" href="#Part3" role="button" aria-expanded="false" aria-controls="Part3")
+                          p.ac-heading Part3 ( 12:00 - 20:00 )
+                    div#Part3.collapse(role="tabpanel" aria-labelledby="Head-3" data-parent="#accordion")
+                      div.card-body
+                        p アイテム3のコンテンツ
                 
         
         // --------PC--------
