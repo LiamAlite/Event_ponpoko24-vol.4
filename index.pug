@@ -156,6 +156,7 @@ body.wrapper
                                       
                                       // --------Description--------
                                       div.col-12.col-lg-6.mt-3.mt-lg-0
+                                      //
                                         ul.nav.nav-tabs
                                           li.nav-item: a.nav-link.active(href="#Japanese_"+ index data-toggle="tab") 日本語
                                           li.nav-item: a.nav-link(href="#English_"+ index data-toggle="tab") English
@@ -173,8 +174,8 @@ body.wrapper
                                         p.share-text.text-center SHARE!
                                         a.sns_btn.btn_twitter.mx-auto.d-block(href="#")
                                           i.fab.fa-twitter
-                                            
-                                    // --------Guest
+
+                                    // --------Guest--------
                                     div.row
                                       div.col
                                         h3.mt-4.mb-0.text-center.text-lg-left Guest
@@ -190,7 +191,6 @@ body.wrapper
                                             each guest in item.guest
                                               div.col-6.col-md-4
                                                 a(href=twitter_link[guest-1]): img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/"+ guest +".png")
-
                               hr
                   // --------part 2--------      
                   div.card
