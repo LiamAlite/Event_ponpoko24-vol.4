@@ -155,7 +155,7 @@ body.wrapper
                                           img.img-fluid(src="/img/thumbnail/"+ item.thumbnail +".png")
                                       
                                       // --------Description--------
-                                      div.col-12.col-lg-6.mt-3.mt-lg-0
+                                      div.col-10.col-lg-6.mt-3.mt-lg-0
                                         ul.nav.nav-tabs
                                           li.nav-item: a.nav-link.active(href="#Japanese_"+ index data-toggle="tab") 日本語
                                           li.nav-item: a.nav-link(href="#English_"+ index data-toggle="tab") English
@@ -169,11 +169,11 @@ body.wrapper
                                             p #{item.desc_cn}
                                       
                                       // --------Share--------
-                                      div.col-12.col-lg-2
-                                        p.share-text.text-center SHARE!
-                                        a.sns_btn.btn_twitter.mx-auto.d-block(href="#")
+                                      div.col-2.col-lg-2.mt-5
+                                        a.sns_btn.btn_twitter.mx-auto.d-block.mb-3(href="#")
                                           i.fab.fa-twitter
-
+                                        a.sns_btn.btn_line.mx-auto.d-block.mb-3(href="https://line.me/R/msg/text/?test")
+                                          i.fab.fa-line
                                     // --------Guest--------
                                     div.row
                                       div.col
