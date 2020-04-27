@@ -71,7 +71,7 @@ body.wrapper
                                 ]
                   each item, index in list
                     div
-                      img.img-fluid(src="/img/thumbnail/" + (index + 1) + ".png")
+                      a(href="#"+(index+1)): img.img-fluid(src="/img/thumbnail/" + (index + 1) + ".png")
                       p.caption.py-lg-3.py-1.d-none.d-lg-block #{item}
             
             // --------Sub Slider--------
@@ -123,7 +123,6 @@ body.wrapper
                                   desc_ja: 'マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！',
                                   desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
                                   desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-                                  share_text: 'すくすくめぐちゃんは5月5日の20時から放送！',
                                   guest: [1, 2, 3, 1, 2, 3],
                                 },
                                 {
@@ -133,7 +132,6 @@ body.wrapper
                                   desc_ja: 'マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！',
                                   desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
                                   desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-                                  share_text: 'すくすくめぐちゃんは5月5日の20時から放送！',
                                   guest: [1, 2, 3, 1, 2, 3],
                                 },
                               ]
@@ -173,10 +171,10 @@ body.wrapper
                                         div.container-fluid
                                           div.row.justify-content-center
                                             div.col-lg-12.col-3
-                                              a.sns_btn.btn_twitter.mx-auto.d-block.mb-3(href="https://twitter.com/intent/tweet?text=" + item.title + "は" + item.time + "に開催！概要をチェック→" + "&url=https://ponpoko24.party/" + "&hashtags=ぽんぽこ24&related=osyarenuts,ponpokoka" rel="nofollow" target="_blank")
+                                              a.sns_btn.btn_twitter.mx-auto.d-block.mb-3(href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「" + item.title + "」は" + item.time + "に開催！概要をチェック→" + "&url=https://ponpoko24.party/" + "&hashtags=ぽんぽこ24&related=osyarenuts,ponpokoka" rel="nofollow" target="_blank")
                                                 i.fab.fa-twitter
                                             div.col-lg-12.col-3
-                                              a.sns_btn.btn_line.mx-auto.d-block.mb-3(href="https://line.me/R/msg/text/?" + item.title + "は" + item.time + "に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow")
+                                              a.sns_btn.btn_line.mx-auto.d-block.mb-3(href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「" + item.title + "」は" + item.time + "に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow")
                                                 i.fab.fa-line
                                             div.col-lg-12.col-3
                                               a.sns_btn.btn_facebook.mx-auto.d-block.mb-3(href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow")
