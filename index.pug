@@ -138,7 +138,7 @@ body.wrapper
                                 },
                               ]
                             each item, index in info
-                              div.timeline_item.mb-5
+                              div.timeline_item.mb-5(id=item.thumbnail)
                                 div.time_date
                                   
                                   // --------Time--------
@@ -155,7 +155,7 @@ body.wrapper
                                           img.img-fluid(src="/img/thumbnail/"+ item.thumbnail +".png")
                                       
                                       // --------Description--------
-                                      div.col-10.col-lg-6.mt-3.mt-lg-0
+                                      div.col-12.col-lg-6.mt-3.mt-lg-0
                                         ul.nav.nav-tabs
                                           li.nav-item: a.nav-link.active(href="#Japanese_"+ index data-toggle="tab") 日本語
                                           li.nav-item: a.nav-link(href="#English_"+ index data-toggle="tab") English
@@ -169,15 +169,25 @@ body.wrapper
                                             p #{item.desc_cn}
                                       
                                       // --------Share--------
-                                      div.col-2.col-lg-2.mt-5
-                                        a.sns_btn.btn_twitter.mx-auto.d-block.mb-3(href="#")
-                                          i.fab.fa-twitter
-                                        a.sns_btn.btn_line.mx-auto.d-block.mb-3(href="https://line.me/R/msg/text/?test")
-                                          i.fab.fa-line
+                                      div.col-12.col-lg-2.mt-lg-4
+                                        div.container-fluid
+                                          div.row.justify-content-center
+                                            div.col-lg-12.col-3
+                                              a.sns_btn.btn_twitter.mx-auto.d-block.mb-3(href="https://twitter.com/intent/tweet?text=" + item.title + "は" + item.time + "に開催！概要をチェック→" + "&url=https://ponpoko24.party/" + "&hashtags=ぽんぽこ24&related=osyarenuts,ponpokoka" rel="nofollow" target="_blank")
+                                                i.fab.fa-twitter
+                                            div.col-lg-12.col-3
+                                              a.sns_btn.btn_line.mx-auto.d-block.mb-3(href="https://line.me/R/msg/text/?" + item.title + "は" + item.time + "に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow")
+                                                i.fab.fa-line
+                                            div.col-lg-12.col-3
+                                              a.sns_btn.btn_facebook.mx-auto.d-block.mb-3(href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow")
+                                                i.fab.fa-facebook
+                                            div.col-lg-12.col-3
+                                              a.sns_btn.btn_pocket.mx-auto.d-block.mb-3(href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow")
+                                                i.fab.fa-get-pocket
                                     // --------Guest--------
                                     div.row
                                       div.col
-                                        h3.mt-4.mb-0.text-center.text-lg-left Guest
+                                        h3.mt-lg-4.mb-0.text-center.text-lg-left Guest
                                         
                                         // --------PC--------
                                         div.guest-list.d-none.d-lg-block
@@ -196,7 +206,7 @@ body.wrapper
                     div.card-header#Head-2(role="tab")
                       h5.mb-0
                         a.collapsed.text-body.d-block.py-1.m-n3(data-toggle="collapse" href="#Part2" role="button" aria-expanded="false" aria-controls="Part2")
-                          p.ac-heading 第二部 ( 07:00 - 11:00 )
+                          p.ac-heading 第二部 (07:00 - 11:00)
                     div#Part2.collapse(role="tabpanel" aria-labelledby="Head-2" data-parent="#accordion")
                       div.card-body
                         p アイテム2のコンテンツ
@@ -206,7 +216,7 @@ body.wrapper
                     div.card-header#Head-3(role="tab")
                       h5.mb-0
                         a.collapsed.text-body.d-block.py-1.m-n3(data-toggle="collapse" href="#Part3" role="button" aria-expanded="false" aria-controls="Part3")
-                          p.ac-heading 第三部 ( 12:00 - 20:00 )
+                          p.ac-heading 第三部 (12:00 - 20:00)
                     div#Part3.collapse(role="tabpanel" aria-labelledby="Head-3" data-parent="#accordion")
                       div.card-body
                         p アイテム3のコンテンツ
