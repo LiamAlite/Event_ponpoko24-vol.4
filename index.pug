@@ -91,8 +91,8 @@ body.wrapper
                   li.nav-item.ml-4: a.nav-link(href="#1") ぽこあーと
           
             // --------Main Slider--------
-            div.row#main-slide.border
-              div.col.border
+            div.row#main-slide
+              div.col
                 div.slider-for.border
                   - 
                     var list = ['20:00 - 21:00 すくすくめぐちゃん',
@@ -103,8 +103,8 @@ body.wrapper
                                 '01:00 - 02:00 緑仙に企画を丸投げしてみた',
                                 ]
                   each item, index in list
-                    div.border
-                      a.border(href="#"+(index+1)): img.img-fluid.border(src="/img/thumbnail/" + (index + 1) + ".png")
+                    div
+                      a(href="#"+(index+1)): img.img-fluid(src="/img/thumbnail/" + (index + 1) + ".png")
                       p.caption.py-lg-3.py-1.d-none.d-lg-block #{item}
             
             // --------Sub Slider--------
