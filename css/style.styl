@@ -161,7 +161,7 @@ h3
   font-family omnes-pro, sans-serif
   font-weight 800
   font-style normal
-  font-size 2em
+  font-size 1.5em
   color white
   text-shadow 0px 0px 7.5px rgba(black, .3)
 
@@ -375,13 +375,18 @@ h3
 .navbar
   border-radius: 0px 0px 10px 10px
   box-shadow: 0px 5px 5px rgba(black, 0.25)
-
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 @media only screen and (max-width: 990px)
   .navbar
     background rgba(black, 0.35)
-    border-radius: 0px 0px 10px 10px
+    border-radius: 10px
     box-shadow: 0px 5px 5px rgba(black, 0.25)
     margin-bottom 0
+    padding 0px 0px 0px 20px
+  .navbar-collapse
+    margin-bottom 20px
   #navbarSupportedContent .nav-item > .nav-link
     text-shadow none
     margin-top 10px
