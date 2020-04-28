@@ -91,9 +91,9 @@ body.wrapper
                   li.nav-item.ml-4: a.nav-link(href="#1") ぽこあーと
           
             // --------Main Slider--------
-            div.row#main-slide
-              div.col
-                div.slider-for
+            div.row#main-slide.border
+              div.col.border
+                div.slider-for.border
                   - 
                     var list = ['20:00 - 21:00 すくすくめぐちゃん',
                                 '21:00 - 22:00 バーチャル・バチェラー',
@@ -116,7 +116,7 @@ body.wrapper
                     img.img-fluid.px-lg-2(src="/img/thumbnail/" + (index + 1) + ".png")
                       
             // --------Time table--------
-            div.row.mt-3
+            div.row.mt-5
               div.col
                 // --------part 1--------
                 include _part1

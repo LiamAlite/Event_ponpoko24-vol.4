@@ -53,24 +53,17 @@ h3
   transition-delay .75s
 
 .slider-for
-  width 100%
-  min-height 56.25%
-  max-height 56.25%
   transform rotate(0.0001deg)
   border-radius 15px
-  margin: 0;
-  padding: 0;
-  line-height: 0;
   & img
     border-radius 15px
-
-.slider-nav
-  width 100%
-  min-height 16.61%
-  max-height 16.61%
-  padding 20px 0px
 #main-slide
-  margin-bottom 15px
+  width inherit
+  height calc(width / 16 * 9)
+
+#sub-slide
+  width inherit
+  height calc(width / 6)
 
 // < 1200px
 @media only screen and (max-width: 767px)
@@ -102,7 +95,7 @@ h3
   position absolute
   transform rotate(0.0001deg)
   background linear-gradient(124deg, #FF907F, #E27171, #E2C671, #E1E271, #71E284, #71DDE2, #7771E2, #E377EF, #E679F2);
-  background-size 10000% 10000%
+  background-size 8000% 5000%
   animation rainbow 25s ease infinite
 
 //--------body section--------
