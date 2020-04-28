@@ -83,7 +83,7 @@ h3
   position absolute
   transform rotate(0.0001deg)
   background linear-gradient(124deg, #FF907F, #E27171, #E2C671, #E1E271, #71E284, #71DDE2, #7771E2, #E377EF, #E679F2);
-  background-size 8000% 5000%
+  background-size 12000% 5000%
   animation rainbow 25s ease infinite
 
 //--------body section--------
@@ -424,9 +424,9 @@ h3
     opacity : 0
     transform : translate(0px, 50px)
     transition : all 500ms
-  & .sns_btn
+  & .icons
     opacity : 0
-    transform : scale(0, 0)
+    transform : translate(0px, -50px)
     transition : all 500ms
 
 .effect-fade.effect-scroll
@@ -442,10 +442,10 @@ h3
     opacity 1
     transform : translate(0, 0)
     transition-delay: 150ms
-  & .sns_btn
+  & .icons
     opacity 1
-    transform : scale(1, 1)
-    transition-delay: 150ms
+    transform : translate(0, 0)
+    transition-delay: 200ms
 
 .carousel-item img
   border-radius 15px

@@ -2,12 +2,12 @@ div.carousel.slide.m-lg-5#carousel(data-ride="carousel" data-interval="4000" dat
   div.carousel-inner
     each item, index in info
       if index == 0
-        div.carousel-item.active: a(href="#"+(index+1))
-          img.d-block.w-100(src="/img/thumbnail/" + (index+1) + ".png")
+        div.carousel-item.active: a(href="#"+(item.thumbnail))
+          img.d-block.w-100(src="/img/thumbnail/" + item.thumbnail + ".png")
           div.carousel-caption.d-none.d-md-block
             h5 #{item.time}　#{item.title}
       else
-        div.carousel-item: a(href="#"+(index+1))
-          img.d-block.w-100(src="/img/thumbnail/" + (index+1) + ".png")
+        div.carousel-item: a(href="#"+(item.thumbnail))
+          img.d-block.w-100(src="/img/thumbnail/" + item.thumbnail + ".png")
           div.carousel-caption.d-none.d-md-block
             h5 #{item.time}　#{item.title}
