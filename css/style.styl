@@ -244,12 +244,28 @@ h3
   background rgba(white, 0.5)
   &:hover
     transform: scale(1.1,1.1);
+
+#norio
+  position relative
+  & .active
+    position: absolute;
+    left: 0;
+    top: -50px;
+    opacity: 0;
+    transition: 1s;
+  &:hover .active
+    transition: 30s;
+    opacity: 1;
+    transform: scale(1.0,1.0);
+
+
 .guest
   height 110px
   width 110px
   &:hover
     cursor pointer
     transform: translate(0px,-7.5px);
+
 
 .guest-list
   & a:nth-child(5n) .img-thumbnail

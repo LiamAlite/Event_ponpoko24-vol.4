@@ -6,16 +6,16 @@ div.row.mt-2
             
             //separater
             if index == 0
-              div.part#Part1
+              div.part.mt-lg-4#Part1
                 h3 第１部
             else if index == 10
-              div.part#Part2
+              div.part.mt-lg-4#Part2
                 h3 第２部
             else if index == 15
-              div.part#Part3
+              div.part.mt-lg-4#Part3
                 h3 第３部
-            else if index == 24
-              div.part#Part4
+            else if index == 22
+              div.part.mt-lg-4#Part4
                 h3 裏配信
                 
             //timeline
@@ -74,7 +74,12 @@ div.row.mt-2
                         // --------PC--------
                         div.guest-list.d-none.d-lg-block
                           each guest in item.guest
-                            a(href=twitter_link[guest-1] target="_blank"): img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/"+ guest +".png")
+                            if guest == 15
+                              a#norio(href=twitter_link[guest-1] target="_blank")
+                                img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/"+ 15 +".png")
+                                img.img-thumbnail.guest.m-2.mb-3.mb-lg-0.active(src="/img/guest/"+ 19 +".png")
+                            else
+                              a(href=twitter_link[guest-1] target="_blank"): img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/"+ guest +".png")
                             
                         // --------SP--------
                         div.container-fluid.d-lg-none.d-block
