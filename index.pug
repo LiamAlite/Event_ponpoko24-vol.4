@@ -93,7 +93,7 @@ body.wrapper
             // --------Main Slider--------
             div.row#main-slide
               div.col
-                div.slider-for.border
+                div.slider-for
                   - 
                     var list = ['20:00 - 21:00 すくすくめぐちゃん',
                                 '21:00 - 22:00 バーチャル・バチェラー',
@@ -110,7 +110,7 @@ body.wrapper
             // --------Sub Slider--------
             div.row.mt-lg-4#sub-slide
               div.col
-                div.slider-nav
+                div.slider-nav.border
                   - var list = ['20:00 - 21:00', '21:00 - 22:00', '22:00 - 23:00', '23:00 - 00:00', '00:00 - 01:00',　'01:00 - 02:00']
                   each item, index in list
                     img.img-fluid.px-lg-2(src="/img/thumbnail/" + (index + 1) + ".png")
