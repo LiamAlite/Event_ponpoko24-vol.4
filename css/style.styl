@@ -26,32 +26,28 @@ h3
   color rgba(black, 0.75)
 
 //--------slide settings--------
-.slick-slide
-  position relative
-  height 56.25%
-  & .caption
-    border-radius 15px 15px 0px 0px
-    transform rotate(0.0001deg)
-    position absolute
-    left 0
-    top 0
-    z-index 2
-    width 100%
-    padding-left 300px
-    background rgba(#222 .5)
-    color #eee
-    opacity 0
-    transition .3s ease
-  	font-family heisei-maru-gothic-std, sans-serif
-  	font-weight 800
-  	font-style normal
-    font-size 1.2em
-    min-width 200px
-    text-align left
-.slick-current .caption
-  opacity 1
-  padding-left 10px
-  transition-delay .75s
+.carousel-inner
+  border-radius: 15px
+.carousel-caption
+  position absolute
+  bottom 0
+  left 0
+  background rgba(black, 0.5)
+  width 100%
+  text-align left
+  padding 20px 0 10px 20%
+  transition ease .3s
+  color transparent
+.carousel-item.active
+  & .carousel-caption
+      color white
+      padding 20px 0 10px 2.5%
+      opacity 1
+      & h5
+        font-size 1.3em
+        font-family heisei-maru-gothic-std, sans-serif
+        font-weight bold
+        font-style normal
 
 .slider-for
   transform rotate(0.0001deg)
@@ -59,20 +55,13 @@ h3
   & img
     border-radius 15px
 
-.slider-nav
+.layout-fix-main
   width 100%
-  min-height 16.61%
-  max-height 16.61%
+  height 56.25%
 
-// < 1200px
-@media only screen and (max-width: 767px)
-  .slider-for
-    width 100%
-    height 56.25%
-  .slider-nav
-    width 100%
-    height 16.61%
-
+.layout-fix-sub
+  width 50vw
+  height 16.6%
 //keyframe
 @keyframes rainbow
   0%{background-position:0% 82%}
@@ -173,10 +162,22 @@ h3
   padding 5px 0px 0px 20px
 //--------Timeline--------
 .cp_timeline04
+  border-radius: 15px
   position relative
   margin 0
   padding-bottom 2em
-  background-color rgba(white, 0.3)
+  background-image linear-gradient(
+  	-45deg,
+    rgba(#eee, 0.7) 25%,
+  	white 25%,
+  	white 50%,
+  	rgba(#eee, 0.7) 50%,
+  	rgba(#eee, 0.7) 75%,
+  	white 75%,
+  	white
+  )
+  background-size 3px 3px
+  background-attachment fixed
   &:before
     position absolute
     top 0px
@@ -279,7 +280,7 @@ h3
   left: 0px;
   }
   .cp_timeline04 .timeline_item .time_date .time:before {
-  left: -15px;
+  left: -18px;
   }
   .cp_timeline04 .timeline_item {
   margin: 0px 0px 0px 10px;
@@ -377,6 +378,9 @@ h3
     box-shadow: 0px 5px 5px rgba(black, 0.25)
     margin-bottom 0
     padding 0px 0px 0px 20px
+  .navbar-brand:hover
+    transition: .3s ease
+    color #71DDE2
   .navbar-collapse
     margin-bottom 20px
   #navbarSupportedContent .nav-item > .nav-link
@@ -384,3 +388,26 @@ h3
     margin-top 10px
     &:hover
       text-shadow none
+
+.part
+  width 100%
+  padding 20px 0px 10px 0px
+  text-align center
+  border-radius: 15px
+  & h3
+    color white
+    font-size 2em
+    letter-spacing 0.1em
+    text-shadow 0px 0px 10px rgba(black, 0.5)
+.part#Part1
+  border solid 2px rgba(#E27171, 0.75)
+  background rgba(#E27171, 0.5)
+.part#Part2
+  border solid 2px rgba(#E2C671, 0.75)
+  background rgba(#E2C671, 0.5)
+.part#Part3
+  border solid 2px rgba(#71E284, 0.75)
+  background rgba(#71E284, 0.5)
+.part#Part4
+  border solid 2px rgba(#71DDE2, 0.75)
+  background rgba(#71DDE2, 0.5)
