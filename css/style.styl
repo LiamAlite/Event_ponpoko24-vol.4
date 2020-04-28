@@ -37,6 +37,7 @@ h3
   text-align left
   padding 20px 0 10px 20%
   transition ease .3s
+  will-change: transform;
   color transparent
 .carousel-item.active
   & .carousel-caption
@@ -125,8 +126,10 @@ h3
 	color rgba(#fff, 0.1)
 	transition-timing-function ease-in-out
 	transition-duration 0.2s
+  will-change: transform;
 	&:hover
 		letter-spacing 0.1em
+    will-change: transform;
 
 .left-text
   top 400px
@@ -233,6 +236,7 @@ h3
           outline-offset -3px
           transition: ease 0.3s
           &:hover
+            will-change: transform;
             cursor: pointer
             opacity: 0.25
 
@@ -243,6 +247,7 @@ h3
   transition: ease 0.1s
   background rgba(white, 0.5)
   &:hover
+    will-change: transform;
     transform: scale(1.1,1.1);
 .guest
   height 110px
@@ -317,9 +322,11 @@ h3
   &:hover
     transform: scale(1.2);
     box-shadow: 0 0.3125em 0.9375em 0 rgba(0, 0, 0, 0.4);
+    will-change: transform;
   &:active
     transform: scale(0.9);
     box-shadow: 0 0.125em 0.1875em 0 rgba(0, 0, 0, 0.4);
+    will-change: transform;
 
 .btn_twitter
   background-color: #55acee
@@ -365,6 +372,7 @@ h3
   &:hover
     color rgba(black, 0.75)
     text-shadow 0px 0px 5px rgba(white, 0.75)
+    will-change: transform;
 .navbar
   border-radius: 0px 0px 10px 10px
   box-shadow: 0px 5px 5px rgba(black, 0.25)
@@ -387,6 +395,7 @@ h3
     text-shadow none
     margin-top 10px
     &:hover
+      will-change: transform;
       text-shadow none
 
 .part
@@ -434,26 +443,19 @@ h3
     opacity 1
     transform : translate(0, 0)
     transition-delay: 150ms
+    will-change: transform;
   & .tab-pane
     opacity 1
     transform : translate(0, 0)
     transition-delay: 150ms
+    will-change: transform;
   & .guest-list, .guest-list-sp
     opacity 1
     transform : translate(0, 0)
     transition-delay: 150ms
+    will-change: transform;
   & .sns_btn
     opacity 1
     transform : scale(1, 1)
     transition-delay: 150ms
-
-#page-top
-  z-index 2000
-  position fixed
-  right 100px
-  bottom 0
-  width 50px
-  height 50px
-  border solid 3px black
-  border-radius 50%
-  background black
+    will-change: transform;
