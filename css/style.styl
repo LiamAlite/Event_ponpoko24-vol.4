@@ -57,20 +57,10 @@ h3
   border-radius 15px
   & img
     border-radius 15px
-
+#main-slide
+  height calc(width / 16 * 9)
+  margin-bottom 15px
 // < 1200px
-@media screen and (max-width: 1200px)
-  #main-slide
-  	height 53vw
-  #sub-slide
-  	max-height 16vw
-
-// > 1200px
-@media screen and (min-width: 1200px)
-	#main-slide
-		max-height 750px
-	#sub-slide
-		max-height 250px
 
 //keyframe
 @keyframes rainbow
@@ -93,7 +83,7 @@ h3
   position absolute
   transform rotate(0.0001deg)
   background linear-gradient(124deg, #FF907F, #E27171, #E2C671, #E1E271, #71E284, #71DDE2, #7771E2, #E377EF, #E679F2);
-  background-size 5000% 5000%
+  background-size 10000% 10000%
   animation rainbow 25s ease infinite
 
 //--------body section--------
@@ -148,11 +138,11 @@ h3
   left -175px
   transform rotate(90deg)
 
-.left-text-sp
+.left-text-sp, .navbar-brand
   font-family omnes-pro, sans-serif
   font-weight 800
   font-style normal
-  font-size 2.5em
+  font-size 2em
   color white
   text-shadow 0px 0px 7.5px rgba(black, .3)
 
@@ -169,7 +159,7 @@ h3
   border none
 .card-header
   background-color rgba(#eee, 0.5)
-
+  padding 5px 0px 0px 20px
 //--------Timeline--------
 .cp_timeline04
   position relative
@@ -350,3 +340,31 @@ h3
 
 .nav-tabs
   border-bottom solid 1px white
+
+//navigation
+#navbarSupportedContent .nav-item > .nav-link
+  font-size 1.3em
+  font-family heisei-maru-gothic-std, sans-serif
+  font-weight bold
+  font-style normal
+  color rgba(white, 0.9)
+  text-shadow 0px 0px 5px rgba(black, 0.75)
+  transition: ease .2s
+  &:hover
+    color rgba(black, 0.75)
+    text-shadow 0px 0px 5px rgba(white, 0.75)
+.navbar
+  border-radius: 0px 0px 10px 10px
+  box-shadow: 0px 5px 5px rgba(black, 0.25)
+
+@media only screen and (max-width: 990px)
+  .navbar
+    background rgba(black, 0.35)
+    border-radius: 0px 0px 10px 10px
+    box-shadow: 0px 5px 5px rgba(black, 0.25)
+    margin-bottom 0
+  #navbarSupportedContent .nav-item > .nav-link
+    text-shadow none
+    margin-top 10px
+    &:hover
+      text-shadow none

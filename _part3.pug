@@ -1,0 +1,92 @@
+// --------part 3--------
+div.card#Part3
+  div.card-header#Head-3(role="tab")
+    h5.mb-0
+      a.text-body.d-block.pt-1.m-n3
+        p.ac-heading 第三部 (20:00 - 06:00)
+  div
+    div.card-body.p-1
+        div.cp_timeline04
+          // --------item--------
+          - 
+            var twitter_link = [
+              'https://twitter.com/oozorasubaru',
+              'https://twitter.com/nekokan_chu',
+              'https://twitter.com/norioo_'
+            ]
+          - 
+            var info = [
+              {
+                time: '22:00-23:00',
+                title: 'ぽこピー批評 ～beyond～',
+                thumbnail: '3',
+                desc_ja: 'マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！',
+                desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+                desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+                guest: [1, 2, 3, 1, 2, 3],
+              },
+            ]
+          each item, index in info
+            div.timeline_item.mb-5(id=item.thumbnail)
+              div.time_date
+                
+                // --------Time--------
+                p.time #{item.time}
+                
+                // --------Title--------
+                p.flag ##{index+1} #{item.title}
+                div.container-fluid
+                  div.row.pt-3.pl-lg-2
+                    
+                    // --------Thumbnail--------
+                    div.col-12.col-lg-4
+                      div.img-wrap.mt-lg-4
+                        img.img-fluid(src="/img/thumbnail/"+ item.thumbnail +".png")
+                    
+                    // --------Description--------
+                    div.col-12.col-lg-6.mt-3.mt-lg-0
+                      ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(href="#Japanese_"+ item.thumbnail data-toggle="tab") 日本語
+                        li.nav-item: a.nav-link(href="#English_"+ item.thumbnail data-toggle="tab") English
+                        li.nav-item: a.nav-link(href="#Chinese_"+ item.thumbnail data-toggle="tab") 中文
+                      div.tab-content.p-2
+                        div.tab-pane.active(id='Japanese_' + item.thumbnail)
+                          p #{item.desc_ja}
+                        div.tab-pane(id='English_' + item.thumbnail)
+                          p #{item.desc_us}
+                        div.tab-pane(id='Chinese_' + item.thumbnail)
+                          p #{item.desc_cn}
+                    
+                    // --------Share--------
+                    div.col-12.col-lg-2.mt-lg-4
+                      div.container-fluid
+                        div.row.justify-content-center
+                          div.col-lg-12.col-3
+                            a.sns_btn.btn_twitter.mx-auto.d-block.mb-3(href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「" + item.title + "」は" + item.time + "に開催！概要をチェック→" + "&url=https://ponpoko24.party/" + "&hashtags=ぽんぽこ24&related=osyarenuts,ponpokoka" rel="nofollow" target="_blank")
+                              i.fab.fa-twitter
+                          div.col-lg-12.col-3
+                            a.sns_btn.btn_line.mx-auto.d-block.mb-3(href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「" + item.title + "」は" + item.time + "に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow")
+                              i.fab.fa-line
+                          div.col-lg-12.col-3
+                            a.sns_btn.btn_facebook.mx-auto.d-block.mb-3(href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow")
+                              i.fab.fa-facebook
+                          div.col-lg-12.col-3
+                            a.sns_btn.btn_pocket.mx-auto.d-block.mb-3(href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow")
+                              i.fab.fa-get-pocket
+                  // --------Guest--------
+                  div.row
+                    div.col
+                      h3.mt-lg-1.mb-0.text-center.text-lg-left Guest
+                      
+                      // --------PC--------
+                      div.guest-list.d-none.d-lg-block
+                        each guest in item.guest
+                          a(href=twitter_link[guest-1] target="_blank"): img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/"+ guest +".png")
+                          
+                      // --------SP--------
+                      div.container-fluid.d-lg-none.d-block
+                        div.row.justify-content-between.guest-list-sp
+                          each guest in item.guest
+                            div.col-6.col-md-4
+                              a(href=twitter_link[guest-1] target="_blank"): img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/"+ guest +".png")
+            hr
