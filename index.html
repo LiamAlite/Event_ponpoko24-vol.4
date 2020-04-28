@@ -38,9 +38,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_SVG"></script><script>
-    $(document).ready(function(){
-      $.adaptiveBackground.run()
-    });
+    //smoooth scroll
     $(function(){
       $('a[href^="#"]').click(function(){
         var speed = 500;
@@ -50,6 +48,25 @@
         $("html, body").animate({scrollTop:position}, speed, "swing");
         return false;
       });
+    });
+  
+    //collapse navbar
+    $(document).ready(function (){
+      $(".navbar-nav li a").click(function(event){
+        $(".navbar-collapse").collapse('hide');
+      });
+    });
+    
+    //scroll margin
+    $(function () {
+     var headerHight = 200; //ヘッダの高さ
+     $('a[href^="#"]').click(function(){
+         var href= $(this).attr("href");
+           var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top-headerHight; //ヘッダの高さ分位置をずらす
+         $("html, body").animate({scrollTop:position}, 550, "swing");
+            return false;
+       });
     });
   </script>
   <!--font-->
