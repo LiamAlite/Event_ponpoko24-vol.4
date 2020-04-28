@@ -1,5 +1,5 @@
-div.carousel.slide.m-lg-5#carousel(data-ride="carousel" data-interval="3000" data-touch="true" data-pause="false")
-  div.carousel-inner(data-touch="true")
+div.carousel.slide.m-lg-5#carousel(data-ride="carousel" data-interval="4000" data-pause="false")
+  div.carousel-inner
     each item, index in info
       if index == 0
         div.carousel-item.active: a(href="#"+(index+1))
@@ -11,7 +11,3 @@ div.carousel.slide.m-lg-5#carousel(data-ride="carousel" data-interval="3000" dat
           img.d-block.w-100(src="/img/thumbnail/" + (index+1) + ".png")
           div.carousel-caption.d-none.d-md-block
             h5 #{item.time}　#{item.title}
-  a.carousel-control-prev(href="#carousel" role="button" data-slide="prev")
-    span.carousel-control-prev-icon(aria-hidden="true")
-  a.carousel-control-next(href="#carousel" role="button" data-slide="next")
-    span.carousel-control-next-icon(aria-hidden="true")  

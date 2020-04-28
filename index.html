@@ -40,19 +40,22 @@
   <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_SVG"></script><script>
     //smoooth scroll
     $(function(){
-      $('a[href^="#"]').click(function(){
-        console.log($('body').outerWidth());
-        if ($('body').outerWidth() < 996){
-         var offset = 300
+      $('a[href^="#"]').click(function(tag){
+        if(tag.target.innerHTML == "日本語" || tag.target.innerHTML == "English" || tag.target.innerHTML == "中文"){
+  
         }else{
-         var offset = 70
+          if ($('body').outerWidth() < 996){
+           var offset = 300
+          }else{
+           var offset = 70
+          }
+          var speed = 500;
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $("html, body").animate({scrollTop:position-offset}, speed, "swing");
+          return false;
         }
-        var speed = 500;
-        var href= $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
-        $("html, body").animate({scrollTop:position-offset}, speed, "swing");
-        return false;
       });
     });
   
@@ -63,6 +66,16 @@
       });
     });
     
+    $(document).ready(function(){
+      $(".carousel-inner").swipe( {
+          swipeLeft:function(event, direction, distance, duration, fingerCount) {
+              $(this).parent().carousel('next'); 
+          },
+          swipeRight:function(event, direction, distance, duration, fingerCount) {
+              $(this).parent().carousel('prev'); 
+          }
+      });
+    });
   </script>
   <!--font-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"/><script>
@@ -111,8 +124,8 @@
               </div>
             </nav>
             <!-- --------Main Slider---------->
-            <div class="carousel slide m-lg-5" id="carousel" data-ride="carousel" data-interval="3000" data-touch="true" data-pause="false">
-              <div class="carousel-inner" data-touch="true">
+            <div class="carousel slide m-lg-5" id="carousel" data-ride="carousel" data-interval="4000" data-pause="false">
+              <div class="carousel-inner">
                 <div class="carousel-item active"><a href="#1"><img class="d-block w-100" src="/img/thumbnail/1.png"/>
                     <div class="carousel-caption d-none d-md-block">
                       <h5>20:00-21:00　すくすくめぐちゃん</h5>
@@ -137,7 +150,7 @@
                     <div class="carousel-caption d-none d-md-block">
                       <h5>22:00-23:00　ぽこピー批評 ～beyond～</h5>
                     </div></a></div>
-              </div><a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a><a class="carousel-control-next" href="#carousel" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"> </span></a>
+              </div>
             </div>
             <!-- --------Time table---------->
             <div class="row mt-2">
@@ -590,8 +603,7 @@
     </div>
   </section>
   <!-- --------Load js---------->
+  <script type="text/javascript" src="/js/jquery.touchSwipe.min.js"></script>
   <script type="text/javascript" src="/js/fade.js"></script>
   <script type="text/javascript" src="/js/background.js"></script>
-  <script type="text/javascript" src="/js/slick.js"></script>
-  <script type="text/javascript" src="/js/jquery.adaptive-backgrounds.js"></script>
 </body>
