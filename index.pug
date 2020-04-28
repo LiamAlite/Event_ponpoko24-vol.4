@@ -73,7 +73,7 @@ body.wrapper
       div.row
         // --------Left--------
         div.col-2.left-side.d-none.d-lg-block
-          div.container-fluid.sticky-top
+          div.container-fluid.sticky-top: a(href="#")
             div.row
               div.col
                 div.left-text PONPOKO24 vol.4
@@ -81,7 +81,7 @@ body.wrapper
         // --------Main content--------
         div.col-12.col-lg-8.shadow-material#main
           div.container-fluid.mt-2
-            
+
             // --------navbar--------
             include _navbar
 
@@ -97,7 +97,9 @@ body.wrapper
             div.row
               div.col
                 div.right-text PARTY!!
-  
+
   // --------Load js--------
+  script(type="text/javascript" src="/js/fade.js")
   script(type="text/javascript" src="/js/background.js")
   script(type="text/javascript" src="/js/slick.js")
+  script(type="text/javascript" src="/js/jquery.adaptive-backgrounds.js")

@@ -37,7 +37,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_SVG"></script>
+  <script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=MML_SVG"></script><script>
+    $(document).ready(function(){
+      $.adaptiveBackground.run()
+    });
+    $(function(){
+      $('a[href^="#"]').click(function(){
+        var speed = 500;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+      });
+    });
+  </script>
   <!--font-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"/><script>
     (function(d) {
@@ -61,13 +75,12 @@
       <div class="row">
         <!-- --------Left---------->
         <div class="col-2 left-side d-none d-lg-block">
-          <div class="container-fluid sticky-top">
-            <div class="row">
-              <div class="col">
-                <div class="left-text">PONPOKO24 vol.4</div>
-              </div>
-            </div>
-          </div>
+          <div class="container-fluid sticky-top"><a href="#">
+              <div class="row">
+                <div class="col">
+                  <div class="left-text">PONPOKO24 vol.4</div>
+                </div>
+              </div></a></div>
         </div>
         <!-- --------Main content---------->
         <div class="col-12 col-lg-8 shadow-material" id="main">
@@ -80,14 +93,14 @@
                   <li class="nav-item ml-4"><a class="nav-link" href="#Part1">第一部</a></li>
                   <li class="nav-item ml-4"><a class="nav-link" href="#Part2">第二部</a></li>
                   <li class="nav-item ml-4"><a class="nav-link" href="#Part3">第三部</a></li>
-                  <li class="nav-item ml-4"><a class="nav-link" href="#1">裏配信</a></li>
+                  <li class="nav-item ml-4"><a class="nav-link" href="#Part4">裏配信</a></li>
                   <li class="nav-item ml-4"><a class="nav-link" href="#1">ぽこあーと</a></li>
                 </ul>
               </div>
             </nav>
             <!-- --------Main Slider---------->
-            <div class="carousel slide m-lg-5" id="carousel" data-ride="carousel" data-interval="5000">
-              <div class="carousel-inner">
+            <div class="carousel slide m-lg-5" id="carousel" data-ride="carousel" data-interval="3000" data-touch="true" data-pause="false">
+              <div class="carousel-inner" data-touch="true">
                 <div class="carousel-item active"><a href="#1"><img class="d-block w-100" src="/img/thumbnail/1.png"/>
                     <div class="carousel-caption d-none d-md-block">
                       <h5>20:00-21:00　すくすくめぐちゃん</h5>
@@ -133,8 +146,8 @@
                         <div class="container-fluid">
                           <div class="row pt-1 pl-lg-2">
                             <!-- --------Thumbnail---------->
-                            <div class="col-12 col-lg-4">
-                              <div class="img-wrap mt-lg-2"><img class="img-fluid" src="/img/thumbnail/1.png"/></div>
+                            <div class="col-12 col-lg-4 effect-fade">
+                              <div class="img-wrap mt-lg-2 tn"><img class="img-fluid" src="/img/thumbnail/1.png"/></div>
                             </div>
                             <!-- --------Description---------->
                             <div class="col-12 col-lg-6 mt-3 mt-lg-0">
@@ -143,7 +156,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#English_1" data-toggle="tab">English</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#Chinese_1" data-toggle="tab">中文</a></li>
                               </ul>
-                              <div class="tab-content p-2">
+                              <div class="tab-content p-2 effect-fade">
                                 <div class="tab-pane active" id="Japanese_1">
                                   <p>マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！</p>
                                 </div>
@@ -159,17 +172,17 @@
                             <div class="col-12 col-lg-2 mt-lg-4">
                               <div class="container-fluid">
                                 <div class="row justify-content-center">
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「すくすくめぐちゃん」は20:00-21:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「すくすくめぐちゃん」は20:00-21:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「すくすくめぐちゃん」は20:00-21:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「すくすくめぐちゃん」は20:00-21:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <!-- --------Guest---------->
                           <div class="row">
-                            <div class="col">
+                            <div class="col effect-fade">
                               <h3 class="mt-lg-1 mb-0 text-center text-lg-left">Guest</h3>
                               <!-- --------PC---------->
                               <div class="guest-list d-none d-lg-block"><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a>
@@ -202,8 +215,8 @@
                         <div class="container-fluid">
                           <div class="row pt-1 pl-lg-2">
                             <!-- --------Thumbnail---------->
-                            <div class="col-12 col-lg-4">
-                              <div class="img-wrap mt-lg-2"><img class="img-fluid" src="/img/thumbnail/2.png"/></div>
+                            <div class="col-12 col-lg-4 effect-fade">
+                              <div class="img-wrap mt-lg-2 tn"><img class="img-fluid" src="/img/thumbnail/2.png"/></div>
                             </div>
                             <!-- --------Description---------->
                             <div class="col-12 col-lg-6 mt-3 mt-lg-0">
@@ -212,7 +225,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#English_2" data-toggle="tab">English</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#Chinese_2" data-toggle="tab">中文</a></li>
                               </ul>
-                              <div class="tab-content p-2">
+                              <div class="tab-content p-2 effect-fade">
                                 <div class="tab-pane active" id="Japanese_2">
                                   <p>マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！</p>
                                 </div>
@@ -228,17 +241,17 @@
                             <div class="col-12 col-lg-2 mt-lg-4">
                               <div class="container-fluid">
                                 <div class="row justify-content-center">
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「バーチャル・バチェラー」は21:00-22:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「バーチャル・バチェラー」は21:00-22:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「バーチャル・バチェラー」は21:00-22:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「バーチャル・バチェラー」は21:00-22:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <!-- --------Guest---------->
                           <div class="row">
-                            <div class="col">
+                            <div class="col effect-fade">
                               <h3 class="mt-lg-1 mb-0 text-center text-lg-left">Guest</h3>
                               <!-- --------PC---------->
                               <div class="guest-list d-none d-lg-block"><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a>
@@ -274,8 +287,8 @@
                         <div class="container-fluid">
                           <div class="row pt-1 pl-lg-2">
                             <!-- --------Thumbnail---------->
-                            <div class="col-12 col-lg-4">
-                              <div class="img-wrap mt-lg-2"><img class="img-fluid" src="/img/thumbnail/3.png"/></div>
+                            <div class="col-12 col-lg-4 effect-fade">
+                              <div class="img-wrap mt-lg-2 tn"><img class="img-fluid" src="/img/thumbnail/3.png"/></div>
                             </div>
                             <!-- --------Description---------->
                             <div class="col-12 col-lg-6 mt-3 mt-lg-0">
@@ -284,7 +297,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#English_3" data-toggle="tab">English</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#Chinese_3" data-toggle="tab">中文</a></li>
                               </ul>
-                              <div class="tab-content p-2">
+                              <div class="tab-content p-2 effect-fade">
                                 <div class="tab-pane active" id="Japanese_3">
                                   <p>マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！</p>
                                 </div>
@@ -300,17 +313,17 @@
                             <div class="col-12 col-lg-2 mt-lg-4">
                               <div class="container-fluid">
                                 <div class="row justify-content-center">
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「ぽこピー批評 ～beyond～」は22:00-23:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「ぽこピー批評 ～beyond～」は22:00-23:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「ぽこピー批評 ～beyond～」は22:00-23:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「ぽこピー批評 ～beyond～」は22:00-23:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <!-- --------Guest---------->
                           <div class="row">
-                            <div class="col">
+                            <div class="col effect-fade">
                               <h3 class="mt-lg-1 mb-0 text-center text-lg-left">Guest</h3>
                               <!-- --------PC---------->
                               <div class="guest-list d-none d-lg-block"><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a>
@@ -346,8 +359,8 @@
                         <div class="container-fluid">
                           <div class="row pt-1 pl-lg-2">
                             <!-- --------Thumbnail---------->
-                            <div class="col-12 col-lg-4">
-                              <div class="img-wrap mt-lg-2"><img class="img-fluid" src="/img/thumbnail/1.png"/></div>
+                            <div class="col-12 col-lg-4 effect-fade">
+                              <div class="img-wrap mt-lg-2 tn"><img class="img-fluid" src="/img/thumbnail/1.png"/></div>
                             </div>
                             <!-- --------Description---------->
                             <div class="col-12 col-lg-6 mt-3 mt-lg-0">
@@ -356,7 +369,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#English_1" data-toggle="tab">English</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#Chinese_1" data-toggle="tab">中文</a></li>
                               </ul>
-                              <div class="tab-content p-2">
+                              <div class="tab-content p-2 effect-fade">
                                 <div class="tab-pane active" id="Japanese_1">
                                   <p>マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！</p>
                                 </div>
@@ -372,17 +385,17 @@
                             <div class="col-12 col-lg-2 mt-lg-4">
                               <div class="container-fluid">
                                 <div class="row justify-content-center">
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「すくすくめぐちゃん」は20:00-21:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「すくすくめぐちゃん」は20:00-21:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「すくすくめぐちゃん」は20:00-21:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「すくすくめぐちゃん」は20:00-21:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <!-- --------Guest---------->
                           <div class="row">
-                            <div class="col">
+                            <div class="col effect-fade">
                               <h3 class="mt-lg-1 mb-0 text-center text-lg-left">Guest</h3>
                               <!-- --------PC---------->
                               <div class="guest-list d-none d-lg-block"><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a>
@@ -406,7 +419,7 @@
                     <hr/>
                     <!--separater-->
                     <div class="part" id="Part4">
-                      <h3>裏実況</h3>
+                      <h3>裏配信</h3>
                     </div>
                     <!--timeline-->
                     <div class="timeline_item mb-2" id="2">
@@ -418,8 +431,8 @@
                         <div class="container-fluid">
                           <div class="row pt-1 pl-lg-2">
                             <!-- --------Thumbnail---------->
-                            <div class="col-12 col-lg-4">
-                              <div class="img-wrap mt-lg-2"><img class="img-fluid" src="/img/thumbnail/2.png"/></div>
+                            <div class="col-12 col-lg-4 effect-fade">
+                              <div class="img-wrap mt-lg-2 tn"><img class="img-fluid" src="/img/thumbnail/2.png"/></div>
                             </div>
                             <!-- --------Description---------->
                             <div class="col-12 col-lg-6 mt-3 mt-lg-0">
@@ -428,7 +441,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#English_2" data-toggle="tab">English</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#Chinese_2" data-toggle="tab">中文</a></li>
                               </ul>
-                              <div class="tab-content p-2">
+                              <div class="tab-content p-2 effect-fade">
                                 <div class="tab-pane active" id="Japanese_2">
                                   <p>マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！</p>
                                 </div>
@@ -444,17 +457,17 @@
                             <div class="col-12 col-lg-2 mt-lg-4">
                               <div class="container-fluid">
                                 <div class="row justify-content-center">
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「バーチャル・バチェラー」は21:00-22:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「バーチャル・バチェラー」は21:00-22:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「バーチャル・バチェラー」は21:00-22:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「バーチャル・バチェラー」は21:00-22:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <!-- --------Guest---------->
                           <div class="row">
-                            <div class="col">
+                            <div class="col effect-fade">
                               <h3 class="mt-lg-1 mb-0 text-center text-lg-left">Guest</h3>
                               <!-- --------PC---------->
                               <div class="guest-list d-none d-lg-block"><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a>
@@ -487,8 +500,8 @@
                         <div class="container-fluid">
                           <div class="row pt-1 pl-lg-2">
                             <!-- --------Thumbnail---------->
-                            <div class="col-12 col-lg-4">
-                              <div class="img-wrap mt-lg-2"><img class="img-fluid" src="/img/thumbnail/3.png"/></div>
+                            <div class="col-12 col-lg-4 effect-fade">
+                              <div class="img-wrap mt-lg-2 tn"><img class="img-fluid" src="/img/thumbnail/3.png"/></div>
                             </div>
                             <!-- --------Description---------->
                             <div class="col-12 col-lg-6 mt-3 mt-lg-0">
@@ -497,7 +510,7 @@
                                 <li class="nav-item"><a class="nav-link" href="#English_3" data-toggle="tab">English</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#Chinese_3" data-toggle="tab">中文</a></li>
                               </ul>
-                              <div class="tab-content p-2">
+                              <div class="tab-content p-2 effect-fade">
                                 <div class="tab-pane active" id="Japanese_3">
                                   <p>マルチクリエイターの東雲メグが登場！癒やし成分たっぷりで送る30分。チャンチョ・メグコンビの超本格抱腹絶倒星座占いも必見！</p>
                                 </div>
@@ -513,17 +526,17 @@
                             <div class="col-12 col-lg-2 mt-lg-4">
                               <div class="container-fluid">
                                 <div class="row justify-content-center">
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「ぽこピー批評 ～beyond～」は22:00-23:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「ぽこピー批評 ～beyond～」は22:00-23:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
-                                  <div class="col-lg-12 col-3"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_twitter mx-auto d-block mb-2" href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「ぽこピー批評 ～beyond～」は22:00-23:00に開催！概要をチェック→&amp;url=https://ponpoko24.party/&amp;hashtags=ぽんぽこ24&amp;related=osyarenuts,ponpokoka" rel="nofollow" target="_blank"><i class="fab fa-twitter"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_line mx-auto d-block mb-2" href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「ぽこピー批評 ～beyond～」は22:00-23:00に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow"><i class="fab fa-line"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_facebook mx-auto d-block mb-2" href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-facebook"></i></a></div>
+                                  <div class="col-lg-12 col-3 effect-fade"><a class="sns_btn btn_pocket mx-auto d-block mb-2" href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow"><i class="fab fa-get-pocket"></i></a></div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <!-- --------Guest---------->
                           <div class="row">
-                            <div class="col">
+                            <div class="col effect-fade">
                               <h3 class="mt-lg-1 mb-0 text-center text-lg-left">Guest</h3>
                               <!-- --------PC---------->
                               <div class="guest-list d-none d-lg-block"><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a><a href="https://twitter.com/oozorasubaru" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/1.png"/></a><a href="https://twitter.com/nekokan_chu" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/2.png"/></a><a href="https://twitter.com/norioo_" target="_blank"><img class="img-thumbnail guest m-2 mb-3 mb-lg-0" src="/img/guest/3.png"/></a>
@@ -565,6 +578,8 @@
     </div>
   </section>
   <!-- --------Load js---------->
+  <script type="text/javascript" src="/js/fade.js"></script>
   <script type="text/javascript" src="/js/background.js"></script>
   <script type="text/javascript" src="/js/slick.js"></script>
+  <script type="text/javascript" src="/js/jquery.adaptive-backgrounds.js"></script>
 </body>

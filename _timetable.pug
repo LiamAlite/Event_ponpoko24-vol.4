@@ -16,7 +16,7 @@ div.row.mt-2
                 h3 第３部
             else if index == 4
               div.part#Part4
-                h3 裏実況
+                h3 裏配信
                 
             //timeline
             div.timeline_item.mb-2(id=item.thumbnail)
@@ -31,8 +31,8 @@ div.row.mt-2
                   div.row.pt-1.pl-lg-2
                     
                     // --------Thumbnail--------
-                    div.col-12.col-lg-4
-                      div.img-wrap.mt-lg-2
+                    div.col-12.col-lg-4.effect-fade
+                      div.img-wrap.mt-lg-2.tn
                         img.img-fluid(src="/img/thumbnail/"+ item.thumbnail +".png")
                     
                     // --------Description--------
@@ -41,7 +41,7 @@ div.row.mt-2
                         li.nav-item: a.nav-link.active(href="#Japanese_"+ item.thumbnail data-toggle="tab") 日本語
                         li.nav-item: a.nav-link(href="#English_"+ item.thumbnail data-toggle="tab") English
                         li.nav-item: a.nav-link(href="#Chinese_"+ item.thumbnail data-toggle="tab") 中文
-                      div.tab-content.p-2
+                      div.tab-content.p-2.effect-fade
                         div.tab-pane.active(id='Japanese_' + item.thumbnail)
                           p #{item.desc_ja}
                         div.tab-pane(id='English_' + item.thumbnail)
@@ -53,21 +53,21 @@ div.row.mt-2
                     div.col-12.col-lg-2.mt-lg-4
                       div.container-fluid
                         div.row.justify-content-center
-                          div.col-lg-12.col-3
+                          div.col-lg-12.col-3.effect-fade
                             a.sns_btn.btn_twitter.mx-auto.d-block.mb-2(href="https://twitter.com/intent/tweet?text=ぽんぽこ24 vol.4 「" + item.title + "」は" + item.time + "に開催！概要をチェック→" + "&url=https://ponpoko24.party/" + "&hashtags=ぽんぽこ24&related=osyarenuts,ponpokoka" rel="nofollow" target="_blank")
                               i.fab.fa-twitter
-                          div.col-lg-12.col-3
+                          div.col-lg-12.col-3.effect-fade
                             a.sns_btn.btn_line.mx-auto.d-block.mb-2(href="https://line.me/R/msg/text/?ぽんぽこ24 vol.4 「" + item.title + "」は" + item.time + "に開催！概要をチェック→ https://ponpoko24.party/" target="_blank" rel="nofollow")
                               i.fab.fa-line
-                          div.col-lg-12.col-3
+                          div.col-lg-12.col-3.effect-fade
                             a.sns_btn.btn_facebook.mx-auto.d-block.mb-2(href="https://www.facebook.com/share.php?u=https://ponpoko24.com" target="_blank" rel="nofollow")
                               i.fab.fa-facebook
-                          div.col-lg-12.col-3
+                          div.col-lg-12.col-3.effect-fade
                             a.sns_btn.btn_pocket.mx-auto.d-block.mb-2(href="https://getpocket.com/edit?url=https://ponpoko24.com" target="_blank" rel="nofollow")
                               i.fab.fa-get-pocket
                   // --------Guest--------
                   div.row
-                    div.col
+                    div.col.effect-fade
                       h3.mt-lg-1.mb-0.text-center.text-lg-left Guest
                       
                       // --------PC--------
