@@ -41,11 +41,17 @@
     //smoooth scroll
     $(function(){
       $('a[href^="#"]').click(function(){
+        console.log($('body').outerWidth());
+        if ($('body').outerWidth() < 996){
+         var offset = 300
+        }else{
+         var offset = 70
+        }
         var speed = 500;
         var href= $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
         var position = target.offset().top;
-        $("html, body").animate({scrollTop:position}, speed, "swing");
+        $("html, body").animate({scrollTop:position-offset}, speed, "swing");
         return false;
       });
     });
@@ -57,17 +63,6 @@
       });
     });
     
-    //scroll margin
-    $(function () {
-     var headerHight = 200; //ヘッダの高さ
-     $('a[href^="#"]').click(function(){
-         var href= $(this).attr("href");
-           var target = $(href == "#" || href == "" ? 'html' : href);
-            var position = target.offset().top-headerHight; //ヘッダの高さ分位置をずらす
-         $("html, body").animate({scrollTop:position}, 550, "swing");
-            return false;
-       });
-    });
   </script>
   <!--font-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous"/><script>
