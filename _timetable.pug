@@ -33,7 +33,7 @@ div.row.mt-2
                     // --------Thumbnail--------
                     div.col-12.col-lg-4.effect-fade
                       div.img-wrap.mt-lg-2.tn
-                        img.img-fluid(src="/img/thumbnail/"+ item.thumbnail +".png")
+                        img.img-fluid.lazyload(data-src="/img/thumbnail/"+ item.thumbnail +".png")
                     
                     // --------Description--------
                     div.col-12.col-lg-6.mt-3.mt-lg-0
@@ -76,15 +76,15 @@ div.row.mt-2
                           each guest in item.guest
                             if guest == 15
                               a#norio(href=twitter_link[guest-1] target="_blank")
-                                img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/"+ 15 +".png")
-                                img.img-thumbnail.guest.m-2.mb-3.mb-lg-0.active(src="/img/guest/"+ 19 +".png")
+                                img.img-thumbnail.guest.m-2.mb-3.mb-lg-0.lazyload(data-src="/img/guest/"+ 15 +".png")
+                                img.img-thumbnail.guest.m-2.mb-3.mb-lg-0.active.lazyload(data-src="/img/guest/"+ 19 +".png")
                             else
-                              a(href=twitter_link[guest-1] target="_blank"): img.img-thumbnail.guest.m-2.mb-3.mb-lg-0(src="/img/guest/"+ guest +".png")
+                              a(href=twitter_link[guest-1] target="_blank"): img.img-thumbnail.guest.m-2.mb-3.mb-lg-0.lazyload(data-src="/img/guest/"+ guest +".png")
                             
                         // --------SP--------
                         div.container-fluid.d-lg-none.d-block
                           div.row.justify-content-between.guest-list-sp
                             each guest in item.guest
                               div.col-6.col-md-4
-                                a(href=twitter_link[guest-1] target="_blank"): img.img-thumbnail.guest.mb-3.mb-lg-0(src="/img/guest/"+ guest +".png")
+                                a(href=twitter_link[guest-1] target="_blank"): img.img-thumbnail.guest.mb-3.mb-lg-0.lazyload(data-src="/img/guest/"+ guest +".png")
             hr
