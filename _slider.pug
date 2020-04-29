@@ -9,6 +9,6 @@ div.carousel.slide.m-lg-5#carousel(data-ride="carousel" data-interval="4000" dat
               h5 #{item.time}　#{item.title}
         else
           div.carousel-item: a(href="#"+(item.thumbnail))
-            img.d-block.w-100.lazyload(data-src="/img/thumbnail/" + item.thumbnail + ".png")
+            img.d-block.w-100(src="/img/thumbnail/" + item.thumbnail + ".png")
             div.carousel-caption.d-none.d-md-block
               h5 #{item.time}　#{item.title}
