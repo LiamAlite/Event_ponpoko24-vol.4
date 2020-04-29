@@ -2,302 +2,299 @@ head
   include _head
   
 body.wrapper
-  div#loader-bg
-    div#loading
-  div#contents
-    canvas#canvas
-    section#body
-      - 
-        var twitter_link = [
-          "https://twitter.com/ARuKo_OKaRa",
-          "https://twitter.com/GYARI_",
-          "https://twitter.com/mzm_kosaka",
-          "https://twitter.com/vd_inuko",
-          "https://twitter.com/sakuramiko35",
-          "https://twitter.com/JoeRikiichi",
-          "https://twitter.com/ZulmIhP1nlMOT5y",
-          "https://twitter.com/HiguchiKaede",
-          "https://twitter.com/Haneru_Inaba",
-          "https://twitter.com/usadapekora",
-          "https://twitter.com/megu_shinonome",
-          "https://twitter.com/mochi8hiyoko",
-          "https://twitter.com/ame_watage",
-          "https://twitter.com/kiryucoco",
-          "https://twitter.com/norioo_",
-          "https://twitter.com/OtogibaraEra",
-          "https://twitter.com/KaguraMea_VoV",
-          "https://twitter.com/oozorasubaru",
-          "https://twitter.com/norioo_",
-          "https://twitter.com/amanopikamee",
-          "https://twitter.com/Nekomiya_Hinata",
-          "https://twitter.com/mishiro_seiso",
-          "https://twitter.com/maimoto_k",
-          "https://twitter.com/nekokan_chu",
-          "https://twitter.com/sana_natori",
-          "https://twitter.com/udukikohh",
-          "https://twitter.com/choueki_tarou",
-          "https://twitter.com/midori_2434",
-          "https://twitter.com/dekakinb",
-          "https://twitter.com/fuji_aoi_0618",
-          "https://twitter.com/Ange_Katrina_",
-          "https://twitter.com/tenkaitukasa",
-          "https://twitter.com/KitakamiFutaba",
-          "https://twitter.com/SIROyoutuber",
-        ]
-      - 
-        var info = [
-          {
-            time: '20:00-21:00',
-            title: 'オープニング',
-            thumbnail: '100',
-            desc_ja: '4回目の開催となったぽんぽこ24。今回のテーマはParty!<br>30名を超えるゲストが一堂に会し、24時間ノンストップで生放送！　一緒にパーティを盛り上げよう！！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [],
-          },
-          {
-            time: '21:00-22:00',
-            title: '電脳少女シロ王',
-            thumbnail: '20',
-            desc_ja: 'シロちゃんをより理解しているのはどちらか？　"同期" のピーナッツくんと "後輩" の北上双葉が一騎打ち。お互いのプライドを賭けた大一番！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [33, 34],
-          },
-          {
-            time: '22:00-23:00',
-            title: 'コンビ愛選手権',
-            thumbnail: '99',
-            desc_ja: '大好きな相方のことなら私が一番知っている！<br>より強固なコンビ力が試される、コンビ愛選手権開催！　答えを合わせて二人の絆を証明だ！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [10, 5, 21, 4, 99, 7],
-          },
-          {
-            time: '23:00-00:00',
-            title: '汚い声でたら即退場',
-            thumbnail: '1',
-            desc_ja: '"Vtuber界の清楚" を代表する容姿端麗な4名がぽんぽこ24に集結。<br>開始直後に退場の危険を秘めたスリルを楽しみながら、最期の瞬間を見届けよう。',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [17, 8, 16],
-          },
-          {
-            time: '00:00-01:00',
-            title: '大喜利代理戦争',
-            thumbnail: '2',
-            desc_ja: 'ファンとしての力が試される視聴者参加型企画。あなたの秀逸な回答が、推しを優勝へと導くかもしれない。<br>専用ハッシュタグをつけてツイートしよう！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [18, 6, 25],
-          },
-          {
-            time: '01:00-02:00',
-            title: 'バーチャルホストクラブ',
-            thumbnail: '13',
-            desc_ja: 'Vtuber界の"パリピ"達が新人ホストになっておもてなし。<br>まだ経験も少ない3人だが、初仕事でお客様を満足させることはできるのか……！？　',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [26, 3],
-          },
-          {
-            time: '02:00-03:00',
-            title: '緑仙に企画を丸投げしてみた',
-            thumbnail: '3',
-            desc_ja: '緑仙に企画立案そのものを丸投げしてしまうという、全く予想ができない企画。<br>数多の企画を経験してきた緑仙が繰り出す、渾身の一手は……？',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [28, 99],
-          },
-          {
-            time: '03:00-04:00',
-            title: 'ぽこピー批評 ～beyond～',
-            thumbnail: '4',
-            desc_ja: 'Vtuber界に起きた出来事を振り返るぽこピー批評が、～beyond～の名を冠して再登場！<br>Vtuberを追えなかった人、最近Vtuberを知った人も、ぽこピーと一緒に歴史を振り返ろう！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [99, 99, 99],
-          },
-          {
-            time: '04:00-05:00',
-            title: '逆凸(とつ)',
-            thumbnail: '99',
-            desc_ja: 'ぽこピーが様々なVtuberへ逆凸！ぽんぽこが気になっているあのVtuberも登場するかも……？',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [99, 99, 99],
-          },
-          {
-            time: '05:00-06:00',
-            title: '凸(とつ)',
-            thumbnail: '6',
-            desc_ja: 'ぽんぽこ24お馴染み、凸待ちの時間！<br>想像を超えた超超個性的なVtuberの登場によって、Vtuberの世界が更に広がること間違いなし。',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [],
-          },
-          {
-            time: '07:00-07:30',
-            title: 'あさぽこ',
-            thumbnail: '17',
-            desc_ja: 'おーはようございますみなさん！　朝から元気にあさココ出張版！<br>ハイテンポなニュースで気持ちよく目を覚まそう！　気になる報道内容は……？',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [14],
-          },
-          {
-            time: '07:30-08:00',
-            title: 'すくすくめぐちゃん',
-            thumbnail: '7',
-            desc_ja: 'めぐちゃんと一緒にすくすく成長！　はぴふりで心も体もリフレッシュ！<br>怖いほど当たるというチャンチョの星座占いfeat.東雲めぐであなたの運勢をチェック！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [11],
-          },
-          {
-            time: '08:00-10:00',
-            title: 'あさごはん',
-            thumbnail: '19',
-            desc_ja: '一部から根強い人気を誇る、「朝ごはんを食べる」企画。甲賀流CGによる超リアルな朝ごはんは飯テロ必至。<br>一緒に朝ごはんを食べて英気を養おう！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [],
-          },
-          {
-            time: '10:00-11:00',
-            title: '3D逆凸(とつ)',
-            thumbnail: '99',
-            desc_ja: 'Virtual Castを使った逆凸3Dバージョン！　ゲストは見てからのお楽しみ！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [99, 99, 99],
-          },  
-          {
-            time: '12:00-13:00',
-            title: 'あつまれ！賭博の森',
-            thumbnail: '16',
-            desc_ja: '平和な森の片隅で、賭博に興じる人の影あり……<br>様々な遊戯をこなしてきた歴戦のギャンブラー達が、己の知力、財力、運を駆使し、勝利を目指す……！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [30, 31, 32],
-          },
-          {
-            time: '13:00-14:00',
-            title: '異業種交流会',
-            thumbnail: '15',
-            desc_ja: '違う分野で活躍する4人が、それぞれの境遇から見た別分野の世界を語る。<br>この企画でしか見ることのできない珍しい交流は、一見の価値あり。',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [29, 99, 99],
-          },
-          {
-            time: '14:00-15:00',
-            title: '崩壊する仮想世界からの脱出',
-            thumbnail: '8',
-            desc_ja: '崩壊する仮想世界から脱出する、視聴者参加型企画。おめシス・ぽこピーが脱出できるかどうかは、あなたのひらめき次第。<br>誰よりも早くヒントを伝えよう！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [99, 99],
-          },
-          {
-            time: '15:00-16:00',
-            title: 'ぽんぽこの知らない世界',
-            thumbnail: '18',
-            desc_ja: '一癖も二癖もあるゲストが、独自の世界観を展開しながらぽこピーとトークを繰り広げる。<br>あのぽんぽこも知らない世界へようこそ……　',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [1, 27],
-          },
-          {
-            time: '16:00-17:00',
-            title: 'バーチャル・バチェラー',
-            thumbnail: '9',
-            desc_ja: '眉目秀麗なピーナッツくん(バチェラー)の元に集ったVtuberが、ピーナッツくんの心を射止めるために熾烈なバトルを展開。<br>バチェラーの心を勝ち取るのは誰だ！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [99, 99, 99, 99, 99, 99],
-          },
-          {
-            time: '17:00-18:00',
-            title: 'バーチャル親子、襲来',
-            thumbnail: '10',
-            desc_ja: '「友達関係は？」「成績は？」「素行は問題ない？」<br>気になる娘の通知表を大公開！　"母" が "娘" を知るまたとないこの機会に、果たして母は何を思うのか……！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [15, 22, 12, 13, 2, 20],
-          },
-          {
-            time: '18:00-19:00',
-            title: '文野環裁判',
-            thumbnail: '11',
-            desc_ja: '超自由奔放な配信で人気街道を爆進中の文野環が裁判にかけられた！　数々の伝説を残してきた彼女だが、罪状は一体……？　そして弁護人はどう闘う……！？',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [24],
-          },
-          {
-            time: '19:00-20:00',
-            title: 'パシフィック・マメ',
-            thumbnail: '12',
-            desc_ja: 'この企画は言えません。<br>この企画は言えません。<br>この企画は言えません。',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [9, 23]
-          },
-          {
-            time: '20:00-20:00',
-            title: '24時間 バーチャルキャノンボール 550km',
-            thumbnail: '51',
-            desc_ja: 'ひたすら走る、走る、走る。実走でも未踏の550km(東京→大阪間)を、24時間かけて走り続ける。果たして完走することはできるのか……！',
-            desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
-            desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
-            guest: [],
-          },
-        ]
-      div.container-fluid
-        div.row
-          // --------Left--------
-          div.col-2.left-side.d-none.d-lg-block
-            div.container-fluid.sticky-top: a(href="#")
-              div.row
-                div.col
-                  div.left-text PONPOKO24 vol.4
-            
-          // --------Main content--------
-          div.col-12.col-lg-8.shadow-material#main
-            div.container-fluid.mt-2
-
-              // --------navbar--------
-              include _navbar
-
-              // --------Main Slider--------
-              include _slider            
-
-              // --------Time table--------
-              include _timetable
+  canvas#canvas
+  section#body
+    - 
+      var twitter_link = [
+        "https://twitter.com/ARuKo_OKaRa",
+        "https://twitter.com/GYARI_",
+        "https://twitter.com/mzm_kosaka",
+        "https://twitter.com/vd_inuko",
+        "https://twitter.com/sakuramiko35",
+        "https://twitter.com/JoeRikiichi",
+        "https://twitter.com/ZulmIhP1nlMOT5y",
+        "https://twitter.com/HiguchiKaede",
+        "https://twitter.com/Haneru_Inaba",
+        "https://twitter.com/usadapekora",
+        "https://twitter.com/megu_shinonome",
+        "https://twitter.com/mochi8hiyoko",
+        "https://twitter.com/ame_watage",
+        "https://twitter.com/kiryucoco",
+        "https://twitter.com/norioo_",
+        "https://twitter.com/OtogibaraEra",
+        "https://twitter.com/KaguraMea_VoV",
+        "https://twitter.com/oozorasubaru",
+        "https://twitter.com/norioo_",
+        "https://twitter.com/amanopikamee",
+        "https://twitter.com/Nekomiya_Hinata",
+        "https://twitter.com/mishiro_seiso",
+        "https://twitter.com/maimoto_k",
+        "https://twitter.com/nekokan_chu",
+        "https://twitter.com/sana_natori",
+        "https://twitter.com/udukikohh",
+        "https://twitter.com/choueki_tarou",
+        "https://twitter.com/midori_2434",
+        "https://twitter.com/dekakinb",
+        "https://twitter.com/fuji_aoi_0618",
+        "https://twitter.com/Ange_Katrina_",
+        "https://twitter.com/tenkaitukasa",
+        "https://twitter.com/KitakamiFutaba",
+        "https://twitter.com/SIROyoutuber",
+      ]
+    - 
+      var info = [
+        {
+          time: '20:00-21:00',
+          title: 'オープニング',
+          thumbnail: '100',
+          desc_ja: '4回目の開催となったぽんぽこ24。今回のテーマはParty!<br>30名を超えるゲストが一堂に会し、24時間ノンストップで生放送！　一緒にパーティを盛り上げよう！！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [],
+        },
+        {
+          time: '21:00-22:00',
+          title: '電脳少女シロ王',
+          thumbnail: '20',
+          desc_ja: 'シロちゃんをより理解しているのはどちらか？　"同期" のピーナッツくんと "後輩" の北上双葉が一騎打ち。お互いのプライドを賭けた大一番！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [33, 34],
+        },
+        {
+          time: '22:00-23:00',
+          title: 'コンビ愛選手権',
+          thumbnail: '99',
+          desc_ja: '大好きな相方のことなら私が一番知っている！<br>より強固なコンビ力が試される、コンビ愛選手権開催！　答えを合わせて二人の絆を証明だ！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [10, 5, 21, 4, 99, 7],
+        },
+        {
+          time: '23:00-00:00',
+          title: '汚い声でたら即退場',
+          thumbnail: '1',
+          desc_ja: '"Vtuber界の清楚" を代表する容姿端麗な4名がぽんぽこ24に集結。<br>開始直後に退場の危険を秘めたスリルを楽しみながら、最期の瞬間を見届けよう。',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [17, 8, 16],
+        },
+        {
+          time: '00:00-01:00',
+          title: '大喜利代理戦争',
+          thumbnail: '2',
+          desc_ja: 'ファンとしての力が試される視聴者参加型企画。あなたの秀逸な回答が、推しを優勝へと導くかもしれない。<br>専用ハッシュタグをつけてツイートしよう！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [18, 6, 25],
+        },
+        {
+          time: '01:00-02:00',
+          title: 'バーチャルホストクラブ',
+          thumbnail: '13',
+          desc_ja: 'Vtuber界の"パリピ"達が新人ホストになっておもてなし。<br>まだ経験も少ない3人だが、初仕事でお客様を満足させることはできるのか……！？　',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [26, 3],
+        },
+        {
+          time: '02:00-03:00',
+          title: '緑仙に企画を丸投げしてみた',
+          thumbnail: '3',
+          desc_ja: '緑仙に企画立案そのものを丸投げしてしまうという、全く予想ができない企画。<br>数多の企画を経験してきた緑仙が繰り出す、渾身の一手は……？',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [28, 99],
+        },
+        {
+          time: '03:00-04:00',
+          title: 'ぽこピー批評 ～beyond～',
+          thumbnail: '4',
+          desc_ja: 'Vtuber界に起きた出来事を振り返るぽこピー批評が、～beyond～の名を冠して再登場！<br>Vtuberを追えなかった人、最近Vtuberを知った人も、ぽこピーと一緒に歴史を振り返ろう！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [99, 99, 99],
+        },
+        {
+          time: '04:00-05:00',
+          title: '逆凸(とつ)',
+          thumbnail: '99',
+          desc_ja: 'ぽこピーが様々なVtuberへ逆凸！ぽんぽこが気になっているあのVtuberも登場するかも……？',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [99, 99, 99],
+        },
+        {
+          time: '05:00-06:00',
+          title: '凸(とつ)',
+          thumbnail: '6',
+          desc_ja: 'ぽんぽこ24お馴染み、凸待ちの時間！<br>想像を超えた超超個性的なVtuberの登場によって、Vtuberの世界が更に広がること間違いなし。',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [],
+        },
+        {
+          time: '07:00-07:30',
+          title: 'あさぽこ',
+          thumbnail: '17',
+          desc_ja: 'おーはようございますみなさん！　朝から元気にあさココ出張版！<br>ハイテンポなニュースで気持ちよく目を覚まそう！　気になる報道内容は……？',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [14],
+        },
+        {
+          time: '07:30-08:00',
+          title: 'すくすくめぐちゃん',
+          thumbnail: '7',
+          desc_ja: 'めぐちゃんと一緒にすくすく成長！　はぴふりで心も体もリフレッシュ！<br>怖いほど当たるというチャンチョの星座占いfeat.東雲めぐであなたの運勢をチェック！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [11],
+        },
+        {
+          time: '08:00-10:00',
+          title: 'あさごはん',
+          thumbnail: '19',
+          desc_ja: '一部から根強い人気を誇る、「朝ごはんを食べる」企画。甲賀流CGによる超リアルな朝ごはんは飯テロ必至。<br>一緒に朝ごはんを食べて英気を養おう！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [],
+        },
+        {
+          time: '10:00-11:00',
+          title: '3D逆凸(とつ)',
+          thumbnail: '99',
+          desc_ja: 'Virtual Castを使った逆凸3Dバージョン！　ゲストは見てからのお楽しみ！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [99, 99, 99],
+        },  
+        {
+          time: '12:00-13:00',
+          title: 'あつまれ！賭博の森',
+          thumbnail: '16',
+          desc_ja: '平和な森の片隅で、賭博に興じる人の影あり……<br>様々な遊戯をこなしてきた歴戦のギャンブラー達が、己の知力、財力、運を駆使し、勝利を目指す……！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [30, 31, 32],
+        },
+        {
+          time: '13:00-14:00',
+          title: '異業種交流会',
+          thumbnail: '15',
+          desc_ja: '違う分野で活躍する4人が、それぞれの境遇から見た別分野の世界を語る。<br>この企画でしか見ることのできない珍しい交流は、一見の価値あり。',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [29, 99, 99],
+        },
+        {
+          time: '14:00-15:00',
+          title: '崩壊する仮想世界からの脱出',
+          thumbnail: '8',
+          desc_ja: '崩壊する仮想世界から脱出する、視聴者参加型企画。おめシス・ぽこピーが脱出できるかどうかは、あなたのひらめき次第。<br>誰よりも早くヒントを伝えよう！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [99, 99],
+        },
+        {
+          time: '15:00-16:00',
+          title: 'ぽんぽこの知らない世界',
+          thumbnail: '18',
+          desc_ja: '一癖も二癖もあるゲストが、独自の世界観を展開しながらぽこピーとトークを繰り広げる。<br>あのぽんぽこも知らない世界へようこそ……　',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [1, 27],
+        },
+        {
+          time: '16:00-17:00',
+          title: 'バーチャル・バチェラー',
+          thumbnail: '9',
+          desc_ja: '眉目秀麗なピーナッツくん(バチェラー)の元に集ったVtuberが、ピーナッツくんの心を射止めるために熾烈なバトルを展開。<br>バチェラーの心を勝ち取るのは誰だ！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [99, 99, 99, 99, 99, 99],
+        },
+        {
+          time: '17:00-18:00',
+          title: 'バーチャル親子、襲来',
+          thumbnail: '10',
+          desc_ja: '「友達関係は？」「成績は？」「素行は問題ない？」<br>気になる娘の通知表を大公開！　"母" が "娘" を知るまたとないこの機会に、果たして母は何を思うのか……！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [15, 22, 12, 13, 2, 20],
+        },
+        {
+          time: '18:00-19:00',
+          title: '文野環裁判',
+          thumbnail: '11',
+          desc_ja: '超自由奔放な配信で人気街道を爆進中の文野環が裁判にかけられた！　数々の伝説を残してきた彼女だが、罪状は一体……？　そして弁護人はどう闘う……！？',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [24],
+        },
+        {
+          time: '19:00-20:00',
+          title: 'パシフィック・マメ',
+          thumbnail: '12',
+          desc_ja: 'この企画は言えません。<br>この企画は言えません。<br>この企画は言えません。',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [9, 23]
+        },
+        {
+          time: '20:00-20:00',
+          title: '24時間 バーチャルキャノンボール 550km',
+          thumbnail: '51',
+          desc_ja: 'ひたすら走る、走る、走る。実走でも未踏の550km(東京→大阪間)を、24時間かけて走り続ける。果たして完走することはできるのか……！',
+          desc_us: "Meg Shinonome, a multi-creator, is here! 30 minutes with plenty of soothing ingredients.Also, don't forget to check out Chancho and Meg Duo's astrological horoscope!",
+          desc_cn: '30分钟的时间里，有大量的舒缓成分。另外，别忘了看看灿灿和梅格多的星座运势!',
+          guest: [],
+        },
+      ]
+    div.container-fluid
+      div.row
+        // --------Left--------
+        div.col-2.left-side.d-none.d-lg-block
+          div.container-fluid.sticky-top: a(href="#")
+            div.row
+              div.col
+                div.left-text PONPOKO24 vol.4
           
-          // --------Right--------
-          div.col-2.right-side.d-none.d-lg-block
-            div.container-fluid.sticky-top
-              div.row
-                div.col
-                  div.right-text PARTY!!
+        // --------Main content--------
+        div.col-12.col-lg-8.shadow-material#main
+          div.container-fluid.mt-2
 
-    // --------Load js--------
-    script(type="text/javascript" src="/js/jquery.touchSwipe.min.js")
-    script(type="text/javascript" src="/js/fade.js")
-    script(type="text/javascript" src="/js/background.js")
-    .
-      <script>
-        $("img.lazyload").lazyload();
-      </script>
-    .
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146142130-3"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-    
-        gtag('config', 'UA-146142130-3');
-      </script>
+            // --------navbar--------
+            include _navbar
+
+            // --------Main Slider--------
+            include _slider            
+
+            // --------Time table--------
+            include _timetable
+        
+        // --------Right--------
+        div.col-2.right-side.d-none.d-lg-block
+          div.container-fluid.sticky-top
+            div.row
+              div.col
+                div.right-text PARTY!!
+
+  // --------Load js--------
+  script(type="text/javascript" src="/js/jquery.touchSwipe.min.js")
+  script(type="text/javascript" src="/js/fade.js")
+  script(type="text/javascript" src="/js/background.js")
+  .
+    <script>
+      $("img.lazyload").lazyload();
+    </script>
+  .
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146142130-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'UA-146142130-3');
+    </script>
