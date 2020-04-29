@@ -28,11 +28,12 @@ h3
 //--------slide settings--------
 .carousel-inner
   border-radius: 15px
+  box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 .carousel-caption
   position absolute
   bottom 0
   left 0
-  background rgba(black, 0.5)
+
   width 100%
   text-align left
   padding 20px 0 10px 20%
@@ -40,6 +41,7 @@ h3
   color transparent
 .carousel-item.active
   & .carousel-caption
+      background rgba(black, 0.5)
       color white
       padding 20px 0 10px 2.5%
       opacity 1
@@ -52,6 +54,7 @@ h3
 .slider-for
   transform rotate(0.0001deg)
   border-radius 15px
+
   & img
     border-radius 15px
 
@@ -466,5 +469,5 @@ h3
 
 .carousel-item img
   border-radius 15px
-  outline solid 10px rgba(white, 0.25)
-  outline-offset -10px
+  outline solid 15px rgba(white, 0.3)
+  outline-offset -15px
