@@ -2,6 +2,7 @@ div.row.mt-2
   div.col
     div.card-body.p-1
         div.cp_timeline04
+          
           each item, index in info
             
             //separater
@@ -32,8 +33,13 @@ div.row.mt-2
                     
                     // --------Thumbnail--------
                     div.col-12.col-lg-4.effect-fade
-                      div.img-wrap.mt-lg-2.tn
-                        img.img-fluid.lazyload(data-src="/img/thumbnail/"+ item.thumbnail +".png")
+                      if index == 16
+                        include _riddle
+                        div#omesis.img-wrap.mt-lg-2.tn
+                          img.img-fluid.lazyload(data-src="/img/thumbnail/"+ item.thumbnail +".png")
+                      else
+                        div.img-wrap.mt-lg-2.tn
+                          img.img-fluid.lazyload(data-src="/img/thumbnail/"+ item.thumbnail +".png")
                     
                     // --------Description--------
                     div.col-12.col-lg-6.mt-3.mt-lg-0

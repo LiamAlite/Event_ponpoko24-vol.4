@@ -1238,7 +1238,16 @@
                           <div class="row pt-1 pl-lg-2">
                             <!-- --------Thumbnail---------->
                             <div class="col-12 col-lg-4 effect-fade">
-                              <div class="img-wrap mt-lg-2 tn"><img class="img-fluid lazyload" data-src="/img/thumbnail/8.png"></div>
+                              <div class="modal fade" id="riddle" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-content" style="font-size:1.1em">
+                                    <div class="modal-body">
+                                      <button class="close" type="button" data-dismiss="modal" aria-label="閉じる"><span aria-hidden="true">✕</span></button><img class="img-fluid" src="img/riddle.png">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="img-wrap mt-lg-2 tn" id="omesis"><img class="img-fluid lazyload" data-src="/img/thumbnail/8.png"></div>
                             </div>
                             <!-- --------Description---------->
                             <div class="col-12 col-lg-6 mt-3 mt-lg-0">
@@ -1748,7 +1757,8 @@
   <!-- --------Load js---------->
   <script type="text/javascript" src="/js/jquery.touchSwipe.min.js"></script>
   <script type="text/javascript" src="/js/fade.js"></script>
-  <script type="text/javascript" src="/js/background.js"></script><script>
+  <script type="text/javascript" src="/js/background.js"></script>
+  <script type="text/javascript" src="/js/riddle.js"></script><script>
     $("img.lazyload").lazyload();
   </script><!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146142130-3"></script>
