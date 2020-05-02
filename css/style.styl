@@ -5,7 +5,7 @@ html, body
   width 100%
   height 100%
   position relative
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling touch
 
 html
   visibility hidden
@@ -18,16 +18,16 @@ h2.title
   font-weight 800
   font-style normal
   font-size 4em
-  color: rgba(#fff, 0.75)
+  color rgba(#fff, 0.75)
   text-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
 h3
-  font-weight: bold;
+  font-weight bold
   color rgba(black, 0.75)
 
 //--------slide settings--------
 .carousel-inner
-  border-radius: 15px
+  border-radius 15px
   box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 .carousel-caption
   position absolute
@@ -85,7 +85,7 @@ h3
   bottom 0
   position absolute
   transform rotate(0.0001deg)
-  background linear-gradient(124deg, #FF907F, #E27171, #E2C671, #E1E271, #71E284, #71DDE2, #7771E2, #E377EF, #E679F2);
+  background linear-gradient(124deg, #FF907F, #E27171, #E2C671, #E1E271, #71E284, #71DDE2, #7771E2, #E377EF, #E679F2)
   background-size 12000% 5000%
   animation rainbow 25s ease infinite
 
@@ -188,18 +188,18 @@ h3
     width 3px
     height 100%
     content ''
-    background linear-gradient(0deg, #E27171, #E2C671, #71E284, #71DDE2, #7771E2);
+    background linear-gradient(0deg, #E27171, #E2C671, #71E284, #71DDE2, #7771E2)
   & .timeline_item
     border-radius 10px
     padding 2px
     margin-bottom 100px
     margin: 0px 0px 0px 17px
     & .desc
-      font-size: 1em;
-      line-height: 20px;
-      margin-top: 10px;
-      padding-left: 20px;
-      border-left: 1px solid #880e4f;
+      font-size 1em
+      line-height 20px
+      margin-top 10px
+      padding-left 20px
+      border-left 1px solid #880e4f
     & .time_date
       & .time
         font-family omnes-pro, sans-serif
@@ -221,14 +221,14 @@ h3
           border 3px solid rgba(233,30,99,0.75)
           background #fff
       & .flag
-        font-size: 1.4em
-        font-weight: bold
-        margin: 0
-        margin-top: -10px
-        color: #880e4f
+        font-size 1.4em
+        font-weight bold
+        margin 0
+        margin-top -10px
+        color #880e4f
       & .img-wrap
         background-image url("/img/thumbnail/101.png")
-        background-size: 100% auto;
+        background-size 100% auto
         border-radius 10px
         padding 3px
         box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
@@ -236,41 +236,38 @@ h3
           border-radius 10px
           outline-offset -3px
           transition: ease 0.3s
-          &:hover
-            //cursor: pointer
-            //opacity: 0.25
 
 .cp_timeline04 .timeline_item .time_date img.guest
   border-radius 10px
   box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
   outline-offset -3px
-  transition: ease 0.1s
+  transition ease 0.1s
   background rgba(white, 0.5)
   &:hover
-    transform: scale(1.1,1.1);
+    transform scale(1.1,1.1)
 
 #norio
   position relative
   & .active
-    position: absolute;
-    left: 0;
-    top: -50px;
-    opacity: 0;
-    transition: 1s;
+    position absolute
+    left 0
+    top: -50px
+    opacity 0
+    transition 1s
   &:hover .active
-    transition: 30s;
-    opacity: 1;
-    transform: scale(1.0,1.0);
+    transition 30s
+    opacity 1
+    transform scale(1.0,1.0)
 
 .cn
-  font-family: san-serif;
+  font-family san-serif
 
 .guest
   height 110px
   width 110px
   &:hover
     cursor pointer
-    transform: translate(0px,-7.5px);
+    transform translate(0px,-7.5px)
 
 
 .guest-list
@@ -297,75 +294,68 @@ h3
   & div:nth-child(5n+4) .img-thumbnail
     border solid 2px #7771E2
 
-@media only screen and (max-width: 767px) {
-  .cp_timeline04:before {
-  left: 0px;
-  }
-  .cp_timeline04 .timeline_item .time_date .time:before {
-  left: -18px;
-  }
-  .cp_timeline04 .timeline_item {
-  margin: 0px 0px 0px 10px;
-}
-  .cp_timeline04 .timeline_item .desc {
-  padding-left: 0px;
-  border-top: 1px solid #880e4f;
-  border-left: none;
-  }
-}
-
-
+@media only screen and (max-width: 767px)
+  .cp_timeline04:before
+    left: 0px;
+  .cp_timeline04 .timeline_item .time_date .time:before
+    left: -18px;
+  .cp_timeline04 .timeline_item
+    margin: 0px 0px 0px 10px;
+  .cp_timeline04 .timeline_item .desc
+    padding-left: 0px;
+    border-top: 1px solid #880e4f;
+    border-left: none;
 
 //button
 .sns_btn
-  display: inline-block;
-  color: #fff;
-  height: 1.75em;
-  width: 1.75em;
-  position: relative;
-  font-size: 1.5em;
-  border-radius: 0.3125em;
-  box-shadow: 0 0.1875em 0.3125em 0 rgba(0, 0, 0, 0.35);
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  transition: all .2s;
-  overflow: hidden;
+  display inline-block
+  color #fff
+  height 1.75em
+  width 1.75em
+  position relative
+  font-size 1.5em
+  border-radius 0.3125em
+  box-shadow 0 0.1875em 0.3125em 0 rgba(0, 0, 0, 0.35)
+  -webkit-transition all .2s
+  -moz-transition all .2s
+  transition all .2s
+  overflow hidden
   i
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow: auto;
+    position absolute
+    top 25%
+    left 50%
+    transform translateX(-50%)
+    overflow auto
   &:hover
-    transform: scale(1.2);
-    box-shadow: 0 0.3125em 0.9375em 0 rgba(0, 0, 0, 0.4);
+    transform scale(1.2)
+    box-shadow 0 0.3125em 0.9375em 0 rgba(0, 0, 0, 0.4)
   &:active
-    transform: scale(0.9);
-    box-shadow: 0 0.125em 0.1875em 0 rgba(0, 0, 0, 0.4);
+    transform scale(0.9)
+    box-shadow 0 0.125em 0.1875em 0 rgba(0, 0, 0, 0.4)
 
 .btn_twitter
-  background-color: #55acee
+  background-color #55acee
   &:hover
-    background: #fff;
-    color: #55acee
+    background #fff
+    color #55acee
 
 .btn_line
-  background-color: #00b900
+  background-color #00b900
   &:hover
-    background: #fff;
-    color: #00b900
+    background #fff
+    color #00b900
 
 .btn_facebook
-  background-color: #315096
+  background-color #315096
   &:hover
-    background: #fff;
-    color: #315096
+    background #fff
+    color #315096
 
 .btn_pocket
-  background-color: #ee4056
+  background-color #ee4056
   &:hover
-    background: #fff;
-    color: #ee4056
+    background #fff
+    color #ee4056
 
 .nav-link
   height 30px
@@ -383,25 +373,25 @@ h3
   font-style normal
   color rgba(white, 0.9)
   text-shadow 0px 0px 5px rgba(black, 0.75)
-  transition: ease .2s
+  transition ease .2s
   &:hover
     color rgba(black, 0.75)
     text-shadow 0px 0px 5px rgba(white, 0.75)
 .navbar
-  border-radius: 0px 0px 10px 10px
-  box-shadow: 0px 5px 5px rgba(black, 0.25)
+  border-radius 0px 0px 10px 10px
+  box-shadow 0px 5px 5px rgba(black, 0.25)
 .navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 @media only screen and (max-width: 990px)
   .navbar
     background rgba(black, 0.35)
-    border-radius: 10px
-    box-shadow: 0px 5px 5px rgba(black, 0.25)
+    border-radius 10px
+    box-shadow 0px 5px 5px rgba(black, 0.25)
     margin-bottom 0
     padding 0px 0px 0px 20px
   .navbar-brand:hover
-    transition: .3s ease
+    transition .3s ease
     color #71DDE2
   .navbar-collapse
     margin-bottom 20px
@@ -420,54 +410,54 @@ h3
     font-size 2em
     letter-spacing 0.1em
     text-shadow 0px 0px 10px rgba(black, 0.5)
-.part#Part1
-  border solid 2px rgba(#E27171, 0.75)
-  background rgba(#E27171, 0.5)
-.part#Part2
-  border solid 2px rgba(#E2C671, 0.75)
-  background rgba(#E2C671, 0.5)
-.part#Part3
-  border solid 2px rgba(#71E284, 0.75)
-  background rgba(#71E284, 0.5)
-.part#Part4
-  border solid 2px rgba(#71DDE2, 0.75)
-  background rgba(#71DDE2, 0.5)
+  &#Part1
+    border solid 2px rgba(#E27171, 0.75)
+    background rgba(#E27171, 0.5)
+  &#Part2
+    border solid 2px rgba(#E2C671, 0.75)
+    background rgba(#E2C671, 0.5)
+  &#Part3
+    border solid 2px rgba(#71E284, 0.75)
+    background rgba(#71E284, 0.5)
+  &#Part4
+    border solid 2px rgba(#71DDE2, 0.75)
+    background rgba(#71DDE2, 0.5)
 
 .effect-fade
   & .tn
-    opacity : 0
-    transform : translate(-20px, 0px)
-    transition : all 500ms
+    opacity 0
+    transform translate(-20px, 0px)
+    transition all 500ms
   & .tab-pane
-    opacity : 0
-    transform : translate(20px, 0px)
-    transition : all 500ms
+    opacity 0
+    transform translate(20px, 0px)
+    transition all 500ms
   & .guest-list, .guest-list-sp
-    opacity : 0
-    transform : translate(0px, 50px)
-    transition : all 500ms
+    opacity 0
+    transform translate(0px, 50px)
+    transition all 500ms
   & .icons
-    opacity : 0
-    transform : translate(0px, -50px)
-    transition : all 500ms
+    opacity 0
+    transform translate(0px, -50px)
+    transition all 500ms
 
-.effect-fade.effect-scroll
-  & .tn
-    opacity 1
-    transform : translate(0, 0)
-    transition-delay: 150ms
-  & .tab-pane
-    opacity 1
-    transform : translate(0, 0)
-    transition-delay: 150ms
-  & .guest-list, .guest-list-sp
-    opacity 1
-    transform : translate(0, 0)
-    transition-delay: 150ms
-  & .icons
-    opacity 1
-    transform : translate(0, 0)
-    transition-delay: 200ms
+  &.effect-scroll
+    & .tn
+      opacity 1
+      transform translate(0, 0)
+      transition-delay 150ms
+    & .tab-pane
+      opacity 1
+      transform translate(0, 0)
+      transition-delay 150ms
+    & .guest-list, .guest-list-sp
+      opacity 1
+      transform translate(0, 0)
+      transition-delay 150ms
+    & .icons
+      opacity 1
+      transform translate(0, 0)
+      transition-delay 200ms
 
 .carousel-item img
   border-radius 15px
