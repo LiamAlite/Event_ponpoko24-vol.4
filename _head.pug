@@ -62,16 +62,6 @@ script(src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.min.js")
       });
     });
     
-    $(document).ready(function(){
-      $(".carousel-inner").swipe( {
-          swipeLeft:function(event, direction, distance, duration, fingerCount) {
-              $(this).parent().carousel('next'); 
-          },
-          swipeRight:function(event, direction, distance, duration, fingerCount) {
-              $(this).parent().carousel('prev'); 
-          }
-      });
-    });
   </script>
 //font
 link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" integrity="sha384-rtJEYb85SiYWgfpCr0jn174XgJTn4rptSOQsMroFBPQSGLdOC5IbubP6lJ35qoM9" crossorigin="anonymous")

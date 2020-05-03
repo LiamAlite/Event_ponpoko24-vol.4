@@ -1,0 +1,101 @@
+doctype html
+head
+  include _head
+  script(src="http://code.jquery.com/ui/1.10.0/jquery-ui.js")
+body.pa-fullbg
+  
+  //--------PC--------
+  div.container-fluid.pa-bg#boxID
+    include _navbar_pa
+    //
+      div.row
+        div.col-12
+          img.img-fluid(src="/img/pokoart/set_1.jpg")
+    -
+      var names = [
+        "akira1020jp",
+        "あこ",
+        "あすわら", 
+        "あふろ",
+        "アフロ田鉄男",
+        "いくら",   
+        "いろんないす",
+        "ういろう",
+        "うやかん", 
+        "おいも",
+        "かい",
+        "カオ",   
+        "かや",
+        "がらんどー",
+        "キセツカゼ", 
+        "きのきの",
+        "きりちゃん",
+        "クソサブカルクイーン",   
+        "こたつ丸",
+        "こめまゆげ",
+        "すなやますな子", 
+        "すみかわ",
+        "すみれ",
+        "そらべん",  
+        "だいまる",
+        "たおる",
+        "たこうさぎ", 
+        "トカゲ",
+        "なむ",
+        "ぬぬぬ",   
+        "バブ",
+        "ハムカツ26",
+        "はり", 
+        "ぴぃぴぃ",
+        "ひぇ",
+        "ぴょんちゃん",   
+        "ふぁぶれがす",
+        "ぶきみ",
+        "べー", 
+        "ぼたとろ",
+        "まこのこ",
+        "みさきち",   
+        "むー",
+        "むぎちよ",
+        "ゆきだるま", 
+        "ゆずりは",
+        "ゆめこ",
+        "よいよさん",    
+        "らいぞう",
+        "らく",   
+        "らびおり",
+        "らむ",
+        "りあ", 
+        "りりかる",
+        "れもた",
+        "れん",   
+        "ロテ",
+        "わつお",
+        "わんさま", 
+        "曳山",
+        "柿",
+        "桜田",   
+        "小村",
+        "早く寝たい太郎",
+        "大久保めんま", 
+        "土佐犬.com",
+        "藤井おでこ",
+        "透明",   
+        "凪街ふよよ",   
+        "弐ノ月",
+        "波花しお",
+        "白身魚", 
+        "氷川へきる",
+        "名折",
+        "憂姫はぐれ",  
+      ]
+    div.row.mt-2
+      each name, index in names
+        div.col-12.col-xl-2.effect-fade
+          div.able.pa-wrapper.elements
+            img.img-fluid.pa-img.mx-auto.d-block.lazyload(src="/img/pokoart/"+(index+1)+".png")
+            h4.name #{name}
+                
+  script(type="text/javascript" src="/js/random.js")
+  script(type="text/javascript" src="/js/fade.js")
+  script(type="text/javascript" src="/js/floating.js")
