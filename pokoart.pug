@@ -103,16 +103,17 @@ body.pa-fullbg
             h4.name #{name}
   
   //--------Mobile--------
-  div.container-fluid.d-lg-none.pa-bg-mobile
-    div.row
-      div.col.part
-        h3.pa-desc ぽこあーと
-    div.row.mt-2
-      each name, index in names
-        div.col-12.mt-3
-          div.pa-wrapper-mobile
-            img.img-fluid.pa-img.mx-auto.d-block(src="/img/pokoart_old/"+(index+1)+".png")
-            h4.name #{name}
+  div.container-fluid.d-lg-none
+    div.pa-bg-mobile
+      div.row
+        div.col.part
+          h3.pa-desc ぽこあーと
+      div.row.mt-2
+        each name, index in names
+          div.col-12.mt-3
+            div.pa-wrapper-mobile
+              img.img-fluid.pa-img.mx-auto.d-block(src="/img/pokoart_old/"+(index+1)+".png")
+              h4.name #{name}
             
   script(type="text/javascript" src="/js/random.js")
   script(type="text/javascript" src="/js/fade.js")
