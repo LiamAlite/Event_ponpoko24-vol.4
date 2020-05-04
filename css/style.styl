@@ -486,7 +486,7 @@ h3
   font-weight bold
   font-style normal
   margin-top 10px
-  
+
 @media only screen and (min-width: 990px)
   .pa-fullbg
     overflow-x: hidden;
@@ -495,19 +495,19 @@ h3
     background-position: center;
     background-image: url(../img/pokoart_old/pa-bg.png);
 
+@media only screen and (max-width: 990px)
+  .pa-fullbg
+    background-image:
+     repeating-linear-gradient(-45deg,
+     rgba(black, 0.05),rgba(black, 0.05) 0.25em,
+     transparent 0, transparent 0.5em);
+
 .pa-bg
   box-shadow 0 0.1875em 0.3125em 0 rgba(0, 0, 0, 0.35)
   background-image:
    repeating-linear-gradient(-45deg,
    rgba(black, 0.05),rgba(black, 0.05) 2px,
    transparent 0, transparent 4px);
-
-.pa-bg-mobile
-  box-shadow 0 0.1875em 0.3125em 0 rgba(0, 0, 0, 0.35)
-  background-image:
-   repeating-linear-gradient(-45deg,
-   rgba(black, 0.05),rgba(black, 0.05) 0.25em,
-   transparent 0, transparent 0.5em);
 
 .pa-img
   filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.75));
