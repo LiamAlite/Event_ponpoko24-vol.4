@@ -84,8 +84,8 @@ head
     ]
   //--------PC--------
 body.pa-fullbg
+  include _navbar_pa
   div.container-fluid.pa-bg.d-lg-block.d-none#boxID
-    include _navbar_pa
     div.row
       div.col.part
         h3.pa-desc ぽこあーと
@@ -104,27 +104,23 @@ body.pa-fullbg
   
   //--------Mobile--------
   div.container-fluid.d-lg-none.pa-bg-mobile
-    include _navbar_pa
     div.row
       div.col.part
         h3.pa-desc ぽこあーと
     div.row
       div.col
         p.pa-desc-mobile PCから見ることで、ぽこあーとを自由に操作することができます！
-    div.row.mt-2
+    div.row.mt-2.mb-4
       each name, index in names
         div.col-12.mt-4
           div.pa-wrapper-mobile.elements
             img.img-fluid.pa-img.mx-auto.d-block(src="/img/pokoart_old/"+(index+1)+".png")
             h4.name #{name}
-            
+
+
   script(type="text/javascript" src="/js/random.js")
   script(type="text/javascript" src="/js/fade.js")
   script(type="text/javascript" src="/js/floating.js")
-  .
-    <script>
-      $("img.lazyload").lazyload();
-    </script>
   .
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146142130-3"></script>
