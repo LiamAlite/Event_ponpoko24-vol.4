@@ -489,14 +489,13 @@ h3
 @media only screen and (max-width: 990px)
   .pa-fullbg
     background linear-gradient(0deg, #E27171, #E2C671, #71E284, #71DDE2, #71E284, #E2C671, #E27171)
-    width 100%
     overflow-x: hidden
 
 .pa-bg-mobile
   background-image:
    repeating-linear-gradient(-45deg,
-   rgba(white),rgba(white) 2px,
-   rgba(white, 0.5) 0, rgba(white, 0.5) 4px);
+   rgba(white),rgba(white) 1px,
+   rgba(white, 0.5) 0, rgba(white, 0.5) 2px);
 
 .pa-bg
   box-shadow 0 0.1875em 0.3125em 0 rgba(0, 0, 0, 0.35)
@@ -539,7 +538,12 @@ h3
     opacity 1
 
 .pa-wrapper-mobile
-  font-size 1.3em
-  font-family heisei-maru-gothic-std, sans-serif
-  font-weight bold
-  font-style normal
+  position relative
+  & h4
+    position absolute
+    top 0
+    right 0
+    font-size 1.3em
+    font-family heisei-maru-gothic-std, sans-serif
+    font-weight bold
+    font-style normal
