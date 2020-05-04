@@ -1,11 +1,89 @@
 doctype html
 head
   include _head
+  title ぽこあーと
   script(src="https://code.jquery.com/ui/1.10.0/jquery-ui.js")
 body.pa-fullbg
-  
+  -
+    var names = [
+      "akira1020jp",
+      "あこ",
+      "あすわら", 
+      "あふろ",
+      "アフロ田鉄男",
+      "いくら",   
+      "いろんないす",
+      "ういろう",
+      "うやかん", 
+      "おいも",
+      "かい",
+      "カオ",   
+      "かや",
+      "がらんどー",
+      "キセツカゼ", 
+      "きのきの",
+      "きりちゃん",
+      "クソサブカルクイーン",   
+      "こたつ丸",
+      "こめまゆげ",
+      "すなやますな子", 
+      "すみかわ",
+      "すみれ",
+      "そらべん",  
+      "だいまる",
+      "たおる",
+      "たこうさぎ", 
+      "トカゲ",
+      "なむ",
+      "ぬぬぬ",   
+      "バブ",
+      "ハムカツ26",
+      "はり", 
+      "ぴぃぴぃ",
+      "ひぇ",
+      "ぴょんちゃん",   
+      "ふぁぶれがす",
+      "ぶきみ",
+      "べー", 
+      "ぼたとろ",
+      "まこのこ",
+      "みさきち",   
+      "むー",
+      "むぎちよ",
+      "ゆきだるま", 
+      "ゆずりは",
+      "ゆめこ",
+      "よいよさん",    
+      "らいぞう",
+      "らく",   
+      "らびおり",
+      "らむ",
+      "りあ", 
+      "りりかる",
+      "れもた",
+      "れん",   
+      "ロテ",
+      "わつお",
+      "わんさま", 
+      "曳山",
+      "柿",
+      "桜田",   
+      "小村",
+      "早く寝たい太郎",
+      "大久保めんま", 
+      "土佐犬.com",
+      "藤井おでこ",
+      "透明",   
+      "凪街ふよよ",   
+      "弐ノ月",
+      "波花しお",
+      "白身魚", 
+      "氷川へきる",
+      "名折",
+      "憂姫はぐれ",  
+    ]
   //--------PC--------
-  div.container-fluid.pa-bg#boxID
+  div.container-fluid.pa-bg.d-lg-block.d-none#boxID
     include _navbar_pa
     div.row
       div.col.part
@@ -13,97 +91,42 @@ body.pa-fullbg
     div.row.d-none.d-lg-block
       div.col.ml-3
         p.pa-desc ぽこあーとを自由に動かすことができるよ！お気に入りのぽこピー達を並べて、スクリーンショットを撮ろう！
-        p.pa-desc ドラッグで移動
-        p.pa-desc 左クリックで右に15°回転
-    //
-      div.row
-        div.col-12
-          img.img-fluid(src="/img/pokoart/set_1.jpg")
-    -
-      var names = [
-        "akira1020jp",
-        "あこ",
-        "あすわら", 
-        "あふろ",
-        "アフロ田鉄男",
-        "いくら",   
-        "いろんないす",
-        "ういろう",
-        "うやかん", 
-        "おいも",
-        "かい",
-        "カオ",   
-        "かや",
-        "がらんどー",
-        "キセツカゼ", 
-        "きのきの",
-        "きりちゃん",
-        "クソサブカルクイーン",   
-        "こたつ丸",
-        "こめまゆげ",
-        "すなやますな子", 
-        "すみかわ",
-        "すみれ",
-        "そらべん",  
-        "だいまる",
-        "たおる",
-        "たこうさぎ", 
-        "トカゲ",
-        "なむ",
-        "ぬぬぬ",   
-        "バブ",
-        "ハムカツ26",
-        "はり", 
-        "ぴぃぴぃ",
-        "ひぇ",
-        "ぴょんちゃん",   
-        "ふぁぶれがす",
-        "ぶきみ",
-        "べー", 
-        "ぼたとろ",
-        "まこのこ",
-        "みさきち",   
-        "むー",
-        "むぎちよ",
-        "ゆきだるま", 
-        "ゆずりは",
-        "ゆめこ",
-        "よいよさん",    
-        "らいぞう",
-        "らく",   
-        "らびおり",
-        "らむ",
-        "りあ", 
-        "りりかる",
-        "れもた",
-        "れん",   
-        "ロテ",
-        "わつお",
-        "わんさま", 
-        "曳山",
-        "柿",
-        "桜田",   
-        "小村",
-        "早く寝たい太郎",
-        "大久保めんま", 
-        "土佐犬.com",
-        "藤井おでこ",
-        "透明",   
-        "凪街ふよよ",   
-        "弐ノ月",
-        "波花しお",
-        "白身魚", 
-        "氷川へきる",
-        "名折",
-        "憂姫はぐれ",  
-      ]
+        p.pa-desc ドラッグで移動できます
+        p.pa-desc 左クリックで右に15°回転します
+    
     div.row.mt-2
       each name, index in names
         div.col-12.col-xl-2.effect-fade
           div.able.pa-wrapper.elements
             img.img-fluid.pa-img.mx-auto.d-block.lazyload(src="/img/pokoart_old/"+(index+1)+".png")
             h4.name #{name}
-                
+  
+  //--------Mobile--------
+  div.container-fluid.d-lg-none
+    include _navbar_pa
+    div.row
+      div.col.part
+        h3.pa-desc ぽこあーと
+    div.row.mt-2
+      each name, index in names
+        div.col-12.col-xl-2.effect-fade
+          div.pa-wrapper.elements
+            img.img-fluid.pa-img.mx-auto.d-block.lazyload(src="/img/pokoart_old/"+(index+1)+".png")
+            h4.name #{name}
   script(type="text/javascript" src="/js/random.js")
   script(type="text/javascript" src="/js/fade.js")
   script(type="text/javascript" src="/js/floating.js")
+  .
+    <script>
+      $("img.lazyload").lazyload();
+    </script>
+  .
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146142130-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'UA-146142130-3');
+    </script>

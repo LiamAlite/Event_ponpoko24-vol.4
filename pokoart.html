@@ -9,7 +9,6 @@
   <meta name="robots" content="index,follow">
   <link rel="apple-touch-icon" type="image/png" href="img/icon-180x180.png">
   <link rel="icon" type="image/png" href="img/icon-192x192.png">
-  <!-- ↑indexに後で変更-->
   <!--OGP-->
   <meta property="og:url" content="https://ponpoko24.party/">
   <meta property="og:title" content="ぽんぽこ24 vol.4">
@@ -74,10 +73,11 @@
     $('#canvas').attr('width', w);
     $('#canvas').attr('height', h);
   </script>
+  <title>ぽこあーと</title>
   <script src="https://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 </head>
 <body class="pa-fullbg">
-  <div class="container-fluid pa-bg" id="boxID">
+  <div class="container-fluid pa-bg d-lg-block d-none" id="boxID">
     <nav class="navbar navbar-expand-lg mb-3 pb-lg-3 d-none d-lg-block"><a class="navbar-brand d-lg-none" href="#">PONPOKO24 vol.4</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -108,15 +108,10 @@
     <div class="row d-none d-lg-block">
       <div class="col ml-3">
         <p class="pa-desc">ぽこあーとを自由に動かすことができるよ！お気に入りのぽこピー達を並べて、スクリーンショットを撮ろう！</p>
-        <p class="pa-desc">ドラッグで移動</p>
-        <p class="pa-desc">左クリックで右に15°回転</p>
+        <p class="pa-desc">ドラッグで移動できます</p>
+        <p class="pa-desc">左クリックで右に15°回転します</p>
       </div>
     </div>
-    <!--
-    div.row
-      div.col-12
-        img.img-fluid(src="/img/pokoart/set_1.jpg")
-    -->
     <div class="row mt-2">
       <div class="col-12 col-xl-2 effect-fade">
         <div class="able pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/1.png">
@@ -495,7 +490,423 @@
       </div>
     </div>
   </div>
+  <div class="container-fluid d-lg-none">
+    <nav class="navbar navbar-expand-lg mb-3 pb-lg-3 d-none d-lg-block"><a class="navbar-brand d-lg-none" href="#">PONPOKO24 vol.4</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ml-4"><a class="nav-link" href="index.html#Part1">第一部</a></li>
+          <li class="nav-item ml-4"><a class="nav-link" href="index.html#Part2">第二部</a></li>
+          <li class="nav-item ml-4"><a class="nav-link" href="index.html#Part3">第三部</a></li>
+          <li class="nav-item ml-4"><a class="nav-link" href="index.html#Part4">裏配信</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg mb-3 pb-lg-3 sticky-top d-lg-none"><a class="navbar-brand d-lg-none" href="#">PONPOKO24 vol.4</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ml-4"><a class="nav-link" href="index.html#Part1">第一部</a></li>
+          <li class="nav-item ml-4"><a class="nav-link" href="index.html#Part2">第二部</a></li>
+          <li class="nav-item ml-4"><a class="nav-link" href="index.html#Part3">第三部</a></li>
+          <li class="nav-item ml-4"><a class="nav-link" href="index.html#Part4">裏配信</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col part">
+        <h3 class="pa-desc">ぽこあーと</h3>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/1.png">
+          <h4 class="name">akira1020jp</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/2.png">
+          <h4 class="name">あこ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/3.png">
+          <h4 class="name">あすわら</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/4.png">
+          <h4 class="name">あふろ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/5.png">
+          <h4 class="name">アフロ田鉄男</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/6.png">
+          <h4 class="name">いくら</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/7.png">
+          <h4 class="name">いろんないす</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/8.png">
+          <h4 class="name">ういろう</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/9.png">
+          <h4 class="name">うやかん</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/10.png">
+          <h4 class="name">おいも</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/11.png">
+          <h4 class="name">かい</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/12.png">
+          <h4 class="name">カオ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/13.png">
+          <h4 class="name">かや</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/14.png">
+          <h4 class="name">がらんどー</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/15.png">
+          <h4 class="name">キセツカゼ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/16.png">
+          <h4 class="name">きのきの</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/17.png">
+          <h4 class="name">きりちゃん</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/18.png">
+          <h4 class="name">クソサブカルクイーン</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/19.png">
+          <h4 class="name">こたつ丸</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/20.png">
+          <h4 class="name">こめまゆげ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/21.png">
+          <h4 class="name">すなやますな子</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/22.png">
+          <h4 class="name">すみかわ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/23.png">
+          <h4 class="name">すみれ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/24.png">
+          <h4 class="name">そらべん</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/25.png">
+          <h4 class="name">だいまる</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/26.png">
+          <h4 class="name">たおる</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/27.png">
+          <h4 class="name">たこうさぎ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/28.png">
+          <h4 class="name">トカゲ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/29.png">
+          <h4 class="name">なむ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/30.png">
+          <h4 class="name">ぬぬぬ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/31.png">
+          <h4 class="name">バブ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/32.png">
+          <h4 class="name">ハムカツ26</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/33.png">
+          <h4 class="name">はり</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/34.png">
+          <h4 class="name">ぴぃぴぃ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/35.png">
+          <h4 class="name">ひぇ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/36.png">
+          <h4 class="name">ぴょんちゃん</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/37.png">
+          <h4 class="name">ふぁぶれがす</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/38.png">
+          <h4 class="name">ぶきみ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/39.png">
+          <h4 class="name">べー</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/40.png">
+          <h4 class="name">ぼたとろ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/41.png">
+          <h4 class="name">まこのこ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/42.png">
+          <h4 class="name">みさきち</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/43.png">
+          <h4 class="name">むー</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/44.png">
+          <h4 class="name">むぎちよ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/45.png">
+          <h4 class="name">ゆきだるま</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/46.png">
+          <h4 class="name">ゆずりは</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/47.png">
+          <h4 class="name">ゆめこ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/48.png">
+          <h4 class="name">よいよさん</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/49.png">
+          <h4 class="name">らいぞう</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/50.png">
+          <h4 class="name">らく</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/51.png">
+          <h4 class="name">らびおり</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/52.png">
+          <h4 class="name">らむ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/53.png">
+          <h4 class="name">りあ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/54.png">
+          <h4 class="name">りりかる</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/55.png">
+          <h4 class="name">れもた</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/56.png">
+          <h4 class="name">れん</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/57.png">
+          <h4 class="name">ロテ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/58.png">
+          <h4 class="name">わつお</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/59.png">
+          <h4 class="name">わんさま</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/60.png">
+          <h4 class="name">曳山</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/61.png">
+          <h4 class="name">柿</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/62.png">
+          <h4 class="name">桜田</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/63.png">
+          <h4 class="name">小村</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/64.png">
+          <h4 class="name">早く寝たい太郎</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/65.png">
+          <h4 class="name">大久保めんま</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/66.png">
+          <h4 class="name">土佐犬.com</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/67.png">
+          <h4 class="name">藤井おでこ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/68.png">
+          <h4 class="name">透明</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/69.png">
+          <h4 class="name">凪街ふよよ</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/70.png">
+          <h4 class="name">弐ノ月</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/71.png">
+          <h4 class="name">波花しお</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/72.png">
+          <h4 class="name">白身魚</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/73.png">
+          <h4 class="name">氷川へきる</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/74.png">
+          <h4 class="name">名折</h4>
+        </div>
+      </div>
+      <div class="col-12 col-xl-2 effect-fade">
+        <div class="pa-wrapper elements"><img class="img-fluid pa-img mx-auto d-block lazyload" src="/img/pokoart_old/75.png">
+          <h4 class="name">憂姫はぐれ</h4>
+        </div>
+      </div>
+    </div>
+  </div>
   <script type="text/javascript" src="/js/random.js"></script>
   <script type="text/javascript" src="/js/fade.js"></script>
-  <script type="text/javascript" src="/js/floating.js"></script>
+  <script type="text/javascript" src="/js/floating.js"></script><script>
+    $("img.lazyload").lazyload();
+  </script><!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146142130-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-146142130-3');
+  </script>
 </body>
