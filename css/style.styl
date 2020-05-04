@@ -468,6 +468,7 @@ h3
 #boxID
   position: absolute;
   z-index: 10;
+
 .pa-desc
   color white
   font-size 1.1em
@@ -486,18 +487,14 @@ h3
     background-position: center;
     background-image: url(../img/pokoart_old/pa-bg.png);
 
-@media only screen and (max-width: 990px)
-  .pa-fullbg
-    background linear-gradient(0deg, #E27171, #E2C671, #71E284, #71DDE2, #71E284, #E2C671, #E27171)
-    overflow-x: hidden
-
-.pa-bg-mobile
+.pa-bg
+  box-shadow 0 0.1875em 0.3125em 0 rgba(0, 0, 0, 0.35)
   background-image:
    repeating-linear-gradient(-45deg,
-   rgba(black, 0.15),rgba(black, 0.15) 2px,
+   rgba(black, 0.05),rgba(black, 0.05) 2px,
    transparent 0, transparent 4px);
-
-.pa-bg
+   
+.pa-bg-mobile
   box-shadow 0 0.1875em 0.3125em 0 rgba(0, 0, 0, 0.35)
   background-image:
    repeating-linear-gradient(-45deg,
@@ -547,3 +544,4 @@ h3
     font-family heisei-maru-gothic-std, sans-serif
     font-weight bold
     font-style normal
+    text-shadow 0px 0px 10px rgba(black, 0.25)
