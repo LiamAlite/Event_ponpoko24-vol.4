@@ -112,8 +112,9 @@ body.pa-fullbg
       each name, index in names
         div.col-12.col-xl-2.effect-fade
           div.pa-wrapper.elements
-            img.img-fluid.pa-img.mx-auto.d-block.lazyload(src="/img/pokoart_old/"+(index+1)+".png")
+            img.img-fluid.pa-img.mx-auto.d-block(src="/img/pokoart_old/"+(index+1)+".png")
             h4.name #{name}
+            
   script(type="text/javascript" src="/js/random.js")
   script(type="text/javascript" src="/js/fade.js")
   script(type="text/javascript" src="/js/floating.js")
