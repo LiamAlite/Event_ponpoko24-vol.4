@@ -3,7 +3,7 @@ head
   include _head
   title ぽこあーと
   script(src="https://code.jquery.com/ui/1.10.0/jquery-ui.js")
-body.pa-fullbg
+
   -
     var names = [
       "akira1020jp",
@@ -83,6 +83,7 @@ body.pa-fullbg
       "憂姫はぐれ",  
     ]
   //--------PC--------
+body.pa-fullbg
   div.container-fluid.pa-bg.d-lg-block.d-none#boxID
     include _navbar_pa
     div.row
@@ -102,7 +103,7 @@ body.pa-fullbg
             h4.name #{name}
   
   //--------Mobile--------
-  div.container-fluid.d-lg-none
+  div.container-fluid.d-lg-none.pa-bg-mobile
     include _navbar_pa
     div.row
       div.col.part
