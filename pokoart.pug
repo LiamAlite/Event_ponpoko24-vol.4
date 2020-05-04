@@ -7,6 +7,14 @@ body.pa-fullbg
   //--------PC--------
   div.container-fluid.pa-bg#boxID
     include _navbar_pa
+    div.row
+      div.col.part
+        h3.pa-desc ぽこあーと
+    div.row.d-none.d-lg-block
+      div.col.ml-3
+        p.pa-desc ぽこあーとを自由に動かすことができるよ！お気に入りのぽこピー達を並べて、スクリーンショットを撮ろう！
+        p.pa-desc ドラッグで移動
+        p.pa-desc 左クリックで右に15°回転
     //
       div.row
         div.col-12
@@ -93,7 +101,7 @@ body.pa-fullbg
       each name, index in names
         div.col-12.col-xl-2.effect-fade
           div.able.pa-wrapper.elements
-            img.img-fluid.pa-img.mx-auto.d-block.lazyload(src="/img/pokoart/"+(index+1)+".png")
+            img.img-fluid.pa-img.mx-auto.d-block.lazyload(src="/img/pokoart_old/"+(index+1)+".png")
             h4.name #{name}
                 
   script(type="text/javascript" src="/js/random.js")
