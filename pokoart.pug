@@ -104,13 +104,17 @@ body.pa-fullbg
   
   //--------Mobile--------
   div.container-fluid.d-lg-none.pa-bg-mobile
+    include _navbar_pa
     div.row
       div.col.part
         h3.pa-desc ぽこあーと
+    div.row
+      div.col
+        p.pa-desc-mobile PCから見ることで、ぽこあーとを自由に操作することができます！
     div.row.mt-2
       each name, index in names
         div.col-12.mt-4
-          div.pa-wrapper-mobile
+          div.pa-wrapper-mobile.elements
             img.img-fluid.pa-img.mx-auto.d-block(src="/img/pokoart_old/"+(index+1)+".png")
             h4.name #{name}
             
