@@ -18,7 +18,7 @@ div.row
             else if index == 14
               div.part.mt-lg-4#Part3
                 h3 第３部
-            else if index == 22
+            else if index == 23
               div.part.mt-lg-4#Part4
                 h3 裏配信
                 
@@ -38,10 +38,13 @@ div.row
                     div.col-12.col-lg-4.effect-fade
                       if index == 16
                         include _riddle
-                        div#omesis.img-wrap.mt-lg-2.tn
+                        a(href=item.url target="_blank"): div.img-wrap.mt-lg-2.tn 
+                          img.img-fluid.lazyload(data-src="/img/thumbnail/"+ item.thumbnail +".png")
+                        div#omesis.img-wrap.mt-4.tn
+                          p.ml-2 脱出ゲーム 謎解き用サムネイル
                           img.img-fluid.lazyload(data-src="/img/thumbnail/"+ item.thumbnail +".png")
                       else
-                        a(href=item.url): div.img-wrap.mt-lg-2.tn 
+                        a(href=item.url target="_blank"): div.img-wrap.mt-lg-2.tn 
                           img.img-fluid.lazyload(data-src="/img/thumbnail/"+ item.thumbnail +".png")
                     
                     // --------Description--------
