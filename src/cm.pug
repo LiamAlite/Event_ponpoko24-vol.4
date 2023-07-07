@@ -1,0 +1,184 @@
+doctype html
+head
+  include _head
+  
+body.wrapper
+  canvas#canvas
+  section#body
+    div.container-fluid
+      // --------navbar--------
+      include _navbar
+      -
+        var cm = [
+          'https://www.youtube.com/watch?v=aMsv26hsd_I',
+          'https://www.youtube.com/watch?v=zJ2tvpEGQi4',
+          'https://www.youtube.com/watch?v=9yx-3RXG8rI',
+          'https://www.youtube.com/watch?v=Yo0mEi1ArQc',
+          'https://www.youtube.com/watch?v=CXCtH_uWiiI',
+          'https://www.youtube.com/watch?v=2E3kSqHffY4',
+          'https://www.youtube.com/watch?v=SpNjQQA7-rQ',
+          'https://www.youtube.com/watch?v=amTxJDdJLIw',
+          'https://www.youtube.com/watch?v=picG5cygcjU',
+          'https://www.youtube.com/watch?v=LA_-k7DcCbU',
+          
+          'https://www.youtube.com/watch?v=GXtUJnyX7Go',
+          'https://www.youtube.com/watch?v=h2KXmO5v3iM',
+          'https://www.youtube.com/watch?v=TCXiS5D8UFE',
+          'https://www.youtube.com/watch?v=zFtypq301bc',
+          'https://www.youtube.com/watch?v=6-dp5yCOThA',
+          'https://www.youtube.com/watch?v=1eojhqHveF4',
+          'https://www.youtube.com/watch?v=-6_lRcCSeoY',
+          'https://www.youtube.com/watch?v=dtIIA7miPuE',
+          'https://www.youtube.com/watch?v=nXCWAtTEv4s',
+          'https://www.youtube.com/watch?v=YKuH6yu2CW8',
+          
+          'https://www.youtube.com/watch?v=7apDv3hG3jY',
+          'https://www.youtube.com/watch?v=S330Ovy2I5E',
+          'https://www.youtube.com/watch?v=UOndICpL0vI',
+          'https://www.youtube.com/watch?v=gwh7zBiQgwY',
+          'https://www.youtube.com/watch?v=B3hrQ5BOYTs',
+          'https://www.youtube.com/watch?v=0fwZcJ3oSE8',
+          'https://www.youtube.com/watch?v=WnwxeKf6E0A',
+          'https://www.youtube.com/watch?v=VWEzult20_8',
+          'https://www.youtube.com/watch?v=61xjlKa9uoM',
+          'https://www.youtube.com/watch?v=d878QDIAK7E',
+          
+          'https://www.youtube.com/watch?v=kbz1i1C3oac',
+          'https://www.youtube.com/watch?v=_T4D1C77N8w',
+          'https://www.youtube.com/watch?v=jc0oO7LJsGg',
+          'https://www.youtube.com/watch?v=1fXBaxuv9KQ',
+          'https://www.youtube.com/watch?v=q-KBAAgXuJY',
+          'https://www.youtube.com/watch?v=r6aesX_bqfk',
+          'https://www.youtube.com/watch?v=ZAuoxxbX2Fc',
+          'https://www.youtube.com/watch?v=WH_qx3tM8GA',
+          'https://www.youtube.com/watch?v=tq05H0lizXg',
+          'https://www.youtube.com/watch?v=HWc9B2bJQWI',
+          
+          'https://www.youtube.com/watch?v=H8b3rUB-Qyg',
+          'https://www.youtube.com/watch?v=n5Owk86Ax5I',
+          'https://www.youtube.com/watch?v=Fy30BPFPgOU',
+          'https://www.youtube.com/watch?v=8AZgNBl_pLs',
+          'https://www.youtube.com/watch?v=y9xBuFPWXnw',
+          'https://www.youtube.com/watch?v=lLlemzf4gg4',
+          'https://www.youtube.com/watch?v=RIfzHAJenzE',
+          'https://www.youtube.com/watch?v=bAVAiBM_krE',
+          'https://www.youtube.com/watch?v=lb3F-xIIyJk',
+          'https://www.youtube.com/watch?v=4uufdvWiiB0',
+          
+          'https://www.youtube.com/watch?v=jwYtzevxQwA',
+          'https://www.youtube.com/watch?v=rnOivJ5N1nM',
+          'https://www.youtube.com/watch?v=sNLEE2Kr8ds',
+          'https://www.youtube.com/watch?v=c8ZHRl06fc0',
+          'https://www.youtube.com/watch?v=aHzbULTdvKM',
+          'https://www.youtube.com/watch?v=blyh9SqCqPw',
+          'https://www.youtube.com/watch?v=e_lkmAaYnaE',
+          'https://www.youtube.com/watch?v=zaVDeWNihwE',
+          'https://www.youtube.com/watch?v=gpB0zrH207o',
+          'https://www.youtube.com/watch?v=_Evnji8tr7w',
+          
+          'https://www.youtube.com/watch?v=hpvrzDKnnbM',
+          'https://www.youtube.com/watch?v=aFmsvrwXFOI',
+          'https://www.youtube.com/watch?v=cggdzO0eDBU',
+          'https://www.youtube.com/watch?v=HI_Wmpf-Z9k',
+          'https://www.youtube.com/watch?v=wHdaJNJDMQk',
+          'https://www.youtube.com/watch?v=xp9gSgyAdG4',
+          'https://www.youtube.com/watch?v=EQQsRjpc4-c',
+          'https://www.youtube.com/watch?v=w6urtnG0D8s',
+          'https://www.youtube.com/watch?v=TeBLo2OKUcg',
+          'https://www.youtube.com/watch?v=AMpUHN-Qxr8',
+          
+          'https://www.youtube.com/watch?v=DnHl--3_-w8',
+          'https://www.youtube.com/watch?v=iayHq_ptuss',
+          'https://www.youtube.com/watch?v=mLVhbGLe2f8',
+          'https://www.youtube.com/watch?v=LmoMg0zVr6w',
+          'https://www.youtube.com/watch?v=IiNBph4wlSc',
+          'https://www.youtube.com/watch?v=n6okbbJi9yU',
+          'https://www.youtube.com/watch?v=LbjdeIRPLmk',
+          'https://www.youtube.com/watch?v=LMCAIKr2Ti8',
+          'https://www.youtube.com/watch?v=1N_zxfoeVC0',
+          'https://www.youtube.com/watch?v=NWl7IU3aFU0',
+          
+          'https://www.youtube.com/watch?v=mW-kSDjDyv0',
+          'https://www.youtube.com/watch?v=cgNaIjQzvuI',
+          'https://www.youtube.com/watch?v=fmWtjOcuYTA',
+          'https://www.youtube.com/watch?v=w66Q6XylYLM',
+          'https://www.youtube.com/watch?v=bGU-9w3Ni7U',
+          'https://www.youtube.com/watch?v=muPy30X__Q0',
+          'https://www.youtube.com/watch?v=tIZaAFrxnv4',
+          'https://www.youtube.com/watch?v=2IiyuhRVMuY',
+          'https://www.youtube.com/watch?v=3L7BPoRpLiU',
+          'https://www.youtube.com/watch?v=Uzj5fXitTNQ',
+          
+          'https://www.youtube.com/watch?v=3PTNlq1j6LU',
+          'https://www.youtube.com/watch?v=52oXQcCgUFE',
+          'https://www.youtube.com/watch?v=is0DroDVbeQ',
+          'https://www.youtube.com/watch?v=fA883OEwkC0',
+          'https://www.youtube.com/watch?v=NZSxHWO9Lc0',
+          'https://www.youtube.com/watch?v=jwNCa84W96g',
+          'https://www.youtube.com/watch?v=-7mMvaMpTKU',
+          'https://www.youtube.com/watch?v=vr7q5nlcEzg',
+          'https://www.youtube.com/watch?v=k5DLNEWbQ0s',
+          'https://www.youtube.com/watch?v=x3xenO3I0qM',
+          
+          'https://www.youtube.com/watch?v=G_LNLBEXtwU',
+          'https://www.youtube.com/watch?v=WUeESpMWIwc',
+          'https://www.youtube.com/watch?v=1rRO8AsTzoQ',
+          'https://www.youtube.com/watch?v=1dtBGOx4P6U',
+          'https://www.youtube.com/watch?v=uY-Nc1DmCzA',
+          'https://www.youtube.com/watch?v=3YyuOcG6Hl4',
+          'https://www.youtube.com/watch?v=mwxvojPHuc4',
+          'https://www.youtube.com/watch?v=ziILaFzxphQ',
+          'https://www.youtube.com/watch?v=_-vm5_uvS18',
+          'https://www.youtube.com/watch?v=SX0MToQJ46Y',
+          
+          'https://www.youtube.com/watch?v=wufh9_p7ffo',
+          'https://www.youtube.com/watch?v=RMhjHJXOtrc',
+          'https://www.youtube.com/watch?v=f2st_RqDl4k',
+          'https://www.youtube.com/watch?v=gqm8kwBFoGM',
+          'https://www.youtube.com/watch?v=GQAumGL1wPQ',
+          'https://www.youtube.com/watch?v=jPELtsc6ZAg',
+          'https://www.youtube.com/watch?v=eyJkLKYGaoU',
+          'https://www.youtube.com/watch?v=fAwk-KZYV3Y',
+          'https://www.youtube.com/watch?v=CmR20OMDYB0',
+          'https://www.youtube.com/watch?v=UtM2or_M9Yc',
+          
+          'https://www.youtube.com/watch?v=evQlw1FrZc4',
+          'https://www.youtube.com/watch?v=JsUfqMVU5U0',
+          'https://www.youtube.com/watch?v=tpM8O0qPAKA',
+          'https://www.youtube.com/watch?v=V_CiwcGjp9c',
+          'https://www.youtube.com/watch?v=_5VV_qj98gI',
+          'https://www.youtube.com/watch?v=5jEVo4lrX4Q',
+          'https://www.youtube.com/watch?v=-HRqrYCwcyk',
+          'https://www.youtube.com/watch?v=6r1yyz7MzTo',
+          'https://www.youtube.com/watch?v=Zx4nMqR3jAk',
+          'https://www.youtube.com/watch?v=gOAk02Wo1_8',
+          
+          'https://www.youtube.com/watch?v=Mwhc3_fhI9A',
+          'https://www.youtube.com/watch?v=KfC5avXILKc',
+        ]
+      div.row.justify-content-left.pb-4
+        each item, index in cm  
+          div.col-xl-2.col-lg-3.col-md-4.col-6.mt-4.elements
+            div.wrapper-cm
+              a(href=item target="_blank"): img.lazyload.img-fluid.d-block.mx-auto.cm-img(src="/img/cm/"+(index+1)+".jpg")
+              
+  // --------Load js--------
+  script(type="text/javascript" src="/js/jquery.touchSwipe.min.js")
+  script(type="text/javascript" src="/js/fade.js")
+  script(type="text/javascript" src="/js/background.js")
+  script(type="text/javascript" src="/js/riddle.js")
+  script(type="text/javascript" src="/js/random.js")
+  .
+    <script>
+      $("img.lazyload").lazyload();
+    </script>
+  .
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146142130-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'UA-146142130-3');
+    </script>
